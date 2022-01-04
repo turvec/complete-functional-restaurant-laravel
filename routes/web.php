@@ -29,3 +29,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/all-users', [AdminController::class,'getAllusers'])->name('allusers');
 
 Route::get('/delete-user/{id}', [AdminController::class,'deleteuser'])->name('deleteuser');
+
+Route::get('/edit-user/{id}', [AdminController::class,'edituser'])->name('edituser');
