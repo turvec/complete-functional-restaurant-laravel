@@ -8,10 +8,17 @@ use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
-    public function allusers(Type $var = null)
+    public function getAllusers()
     {
         $users = User::all();
         return view('admin.allusers', compact('users'));
+        # code...
+    }
+    public function deleteuser($id)
+    {
+        $user = User::find($id);
+        $user->delete();
+        return redirect()->back();
         # code...
     }
     //

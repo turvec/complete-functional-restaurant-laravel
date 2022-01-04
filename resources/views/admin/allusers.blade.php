@@ -73,8 +73,8 @@
                                                         <div class="dropdown-menu dropdown-menu-right border py-0">
                                                             <div class="py-2">
                                                                 @if ($user->usertype == '0')
-                                                                <a class="dropdown-item"  href="#!">Edit</a>
-                                                                <a class="dropdown-item text-danger" href="#!">Delete</a></div>
+                                                                <a class="dropdown-item"  href="{{route('edituser',$user->id)}}">Edit</a>
+                                                            <a class="dropdown-item text-danger" href="{{route('deleteuser',$user->id)}}">Delete</a></div>
                                                                 @else
                                                                 <a class="dropdown-item text-danger">Not Allowed</a></div>
                                                                 @endif
