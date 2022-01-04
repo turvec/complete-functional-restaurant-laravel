@@ -32,4 +32,6 @@ Route::get('/delete-user/{id}', [AdminController::class,'deleteuser'])->name('de
 
 Route::post('/edit-user', [AdminController::class,'edituser'])->name('edituser');
 
-Route::get('/food-menu', [AdminController::class,'getMenu'])->name('foodmenu');
+Route::get('/add-food', [AdminController::class,'addFood'])->name('addfood');
+
+Route::post('/upload-food', [AdminController::class,'uploadFood'])->name('upload-food');
