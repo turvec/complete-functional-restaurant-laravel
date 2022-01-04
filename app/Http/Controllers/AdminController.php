@@ -21,12 +21,6 @@ class AdminController extends Controller
         return redirect()->back();
         # code...
     }
-    public function edituser($id)
-    {
-        $user = User::find($id);
-        return view
-        # code...
-    }
 
     //
 }
