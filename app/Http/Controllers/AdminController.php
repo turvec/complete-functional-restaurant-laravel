@@ -21,6 +21,16 @@ class AdminController extends Controller
         return redirect()->back();
         # code...
     }
+
+    public function getMenu()
+    {
+        return view('admin.foodmenu');
+        # code...
+    }
+
+
+
+
     public function edituser(Request $request, User $data)
     {
         // $data->id = $request->id;
