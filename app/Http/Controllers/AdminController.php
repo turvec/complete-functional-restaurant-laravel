@@ -21,6 +21,6 @@ class AdminController extends Controller
         return redirect()->back();
         # code...
     }
-
+   
     //
 }

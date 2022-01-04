@@ -122,7 +122,7 @@ data-dismiss="modal"><span>&times;</span>
 </button>
 </div>
 <div class="modal-body">
-<form method="POST" action="{{route('edituser',$user->id)}}">@csrf
+<form method="POST" action="{{route('edituser')}}">@csrf
 <div class="form-group">
 <label
 class="text-black font-w500">Name</label>
@@ -131,6 +131,7 @@ class="text-black font-w500">Name</label>
 <div class="form-group">
 <label class="text-black font-w500">Email</label>
 <input value="{{$user->email}}" name="email" type="email" class="form-control">
+<input value="{{$user->id}}" name="id" type="hidden" class="form-control">
 </div>
 <div class="form-group">
 <label
