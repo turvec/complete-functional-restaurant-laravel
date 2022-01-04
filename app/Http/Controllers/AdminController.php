@@ -8,10 +8,10 @@ use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
-    public function allcustomers(Type $var = null)
+    public function allusers(Type $var = null)
     {
-        $customers = User::all();
-        return view('admin.allcustomers', compact('customers'));
+        $users = User::all();
+        return view('admin.allusers', compact('users'));
         # code...
     }
     //

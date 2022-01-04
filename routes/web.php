@@ -26,4 +26,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::get('/all-customers', [AdminController::class,'allcustomers'])->name('allcustomers');
+Route::get('/all-users', [AdminController::class,'allusers'])->name('allusers');
