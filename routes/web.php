@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
@@ -16,7 +17,7 @@ use App\Http\Controllers\HomeController;
 */
 
 
-Route::get('/', [HomeController::class,'index'])->name('user');
+Route::get('/', [HomeController::class,'index']);
 
 Route::get('/redirects', [HomeController::class,'redirects']);
 //
@@ -24,3 +25,5 @@ Route::get('/redirects', [HomeController::class,'redirects']);
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('/all-customers', [AdminController::class,'allcustomers'])->name('allcustomers');
