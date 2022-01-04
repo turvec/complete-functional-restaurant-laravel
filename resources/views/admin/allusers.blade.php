@@ -132,11 +132,12 @@ class="text-black font-w500">Name</label>
 <label class="text-black font-w500">Email</label>
 <input value="{{$user->email}}" name="email" type="email" class="form-control">
 <input value="{{$user->id}}" name="id" type="hidden" class="form-control">
+
 </div>
 <div class="form-group">
 <label
-class="text-black font-w500">Phone</label>
-<input type="text" class="form-control">
+class="text-black font-w500">Password</label>
+<input value="{{$user->password}}" name="password" type="text" class="form-control">
 </div>
 <div class="form-group">
 <button class="btn btn-primary">SAVE</button>

@@ -30,4 +30,4 @@ Route::get('/all-users', [AdminController::class,'getAllusers'])->name('allusers
 
 Route::get('/delete-user/{id}', [AdminController::class,'deleteuser'])->name('deleteuser');
 
-Route::get('/edit-user', [AdminController::class,'edituser'])->name('edituser');
+Route::post('/edit-user', [AdminController::class,'edituser'])->name('edituser');

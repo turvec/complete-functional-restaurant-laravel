@@ -21,6 +21,16 @@ class AdminController extends Controller
         return redirect()->back();
         # code...
     }
+    public function edituser(Request $request, User $data)
+    {
+        // $data->id = $request->id;
+        // $data->name = $request->name;
+        // $data->email = $request->email;
+        // $data->password = $request->password;
+        // $data->save();
+        // return back();
+        # code...
+    }
    
     //
 }
