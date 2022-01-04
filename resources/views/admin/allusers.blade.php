@@ -100,6 +100,42 @@
                         </div>
                         </td>
                         </tr>
+                        <!-- Edit modal -->
+<div class="modal fade" id="addContactModal">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title">Edit User</h5>
+        <button type="button" class="close"
+        data-dismiss="modal"><span>&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+        <form method="POST" action="{{route('edituser')}}">@csrf
+        <div class="form-group">
+        <label
+        class="text-black font-w500">Name</label>
+        <input value="{{$user->name}}" name="name" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+        <label class="text-black font-w500">Email</label>
+        <input value="{{$user->email}}" name="email" type="email" class="form-control">
+        <input value="{{$user->id}}" name="id" type="hidden" class="form-control">
+        
+        </div>
+        {{-- <div class="form-group">
+        <label
+        class="text-black font-w500">Password</label>
+        <input value="{{$user->password}}" name="password" type="text" class="form-control">
+        </div> --}}
+        <div class="form-group">
+        <button class="btn btn-primary">SAVE</button>
+        </div>
+        </form>
+        </div>
+        </div>
+        </div>
+        </div>
                         @endforeach
 
                         </tbody>
@@ -111,41 +147,6 @@
     </div>
 </div>
 </div>
-<!-- Edit modal -->
-<div class="modal fade" id="addContactModal">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header">
-<h5 class="modal-title">Edit User</h5>
-<button type="button" class="close"
-data-dismiss="modal"><span>&times;</span>
-</button>
-</div>
-<div class="modal-body">
-<form method="POST" action="{{route('edituser')}}">@csrf
-<div class="form-group">
-<label
-class="text-black font-w500">Name</label>
-<input value="{{$user->name}}" name="name" type="text" class="form-control">
-</div>
-<div class="form-group">
-<label class="text-black font-w500">Email</label>
-<input value="{{$user->email}}" name="email" type="email" class="form-control">
-<input value="{{$user->id}}" name="id" type="hidden" class="form-control">
 
-</div>
-<div class="form-group">
-<label
-class="text-black font-w500">Password</label>
-<input value="{{$user->password}}" name="password" type="text" class="form-control">
-</div>
-<div class="form-group">
-<button class="btn btn-primary">SAVE</button>
-</div>
-</form>
-</div>
-</div>
-</div>
-</div>
 @endsection
 //
