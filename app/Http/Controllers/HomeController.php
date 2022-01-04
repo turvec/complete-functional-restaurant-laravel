@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('home');
+        return view('layouts.main');
         # code...
     }
     public function redirects()
