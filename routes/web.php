@@ -18,11 +18,12 @@ use App\Http\Controllers\UserController;
 */
 
 
-Route::get('/', [HomeController::class,'index']);
+Route::get('/', [HomeController::class,'index'])->name('home');
 
 Route::get('/redirects', [HomeController::class,'redirects']);
 //
 Route::get('/about', [UserController::class,'about'])->name('about');
+Route::get('/food-menu', [UserController::class,'menu'])->name('menu');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

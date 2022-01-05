@@ -68,7 +68,7 @@
                             <nav>
                                 <ul>
                                     <li>
-                                        <a href="#" class="act-link">Home </a>
+                                        <a href="{{route('home')}}" class="act-link">Home </a>
                                     </li>
                                     <li><a href="{{route('menu')}}">Food Menu</a></li>
                                     <li><a href="{{route('about')}}">About</a></li>

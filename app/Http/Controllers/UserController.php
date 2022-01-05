@@ -11,5 +11,10 @@ class UserController extends Controller
         return view('user.about');
         # code...
     }
+    public function menu()
+    {
+        return view('user.foodmenu');
+        # code...
+    }
     //
 }
