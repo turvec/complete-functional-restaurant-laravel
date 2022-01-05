@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Food;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -13,7 +15,8 @@ class UserController extends Controller
     }
     public function menu()
     {
-        return view('user.foodmenu');
+        $foods = Food::all();
+        return view('user.foodmenu', compact('foods'));
         # code...
     }
     //
