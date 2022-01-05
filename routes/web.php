@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
@@ -24,6 +25,9 @@ Route::get('/redirects', [HomeController::class,'redirects']);
 //
 Route::get('/about', [UserController::class,'about'])->name('about');
 Route::get('/food-menu', [UserController::class,'menu'])->name('menu');
+
+Route::get('/add-category', [CategoryController::class,'index'])->name('addcategory');
+Route::post('/upload-category', [CategoryController::class,'data'])->name('upload-category');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

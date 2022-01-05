@@ -12,8 +12,8 @@
             </div>
             <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="javascript:void(0)">Form</a></li>
-                    <li class="breadcrumb-item active"><a href="javascript:void(0)">Element</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">Foods</a></li>
+                    <li class="breadcrumb-item active"><a href="javascript:void(0)">Upload</a></li>
                 </ol>
             </div>
         </div>
@@ -59,10 +59,13 @@
                                         <label class="input-group-text bg-primary text-white">Choose Category</label>
                                     </div>
                                     <div class="dropdown bootstrap-select default-select dropup">
-                                        <select
+                                        <select name="category_id"
                                             class="default-select" tabindex="-98">
                                             <option selected="">Category</option>
-                                            <option value="1">One</option>
+                                            @foreach ($categories as $category)
+                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                            @endforeach
+                                           
                                         </select>
                                     </div>
                                 </div>

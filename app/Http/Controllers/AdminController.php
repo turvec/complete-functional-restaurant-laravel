@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Food;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -34,7 +35,8 @@ class AdminController extends Controller
 
     public function addFood()
     {
-        return view('admin.addfood');
+        $categories = Category::orderBy('name','asc')->get();
+        return view('admin.addfood', compact('categories'));
         # code...
     }
     public function uploadFood(Request $request)
@@ -49,6 +51,7 @@ class AdminController extends Controller
         $data->title = $request->title;
         $data->price = $request->price;
         $data->description = $request->description;
+        $data->category_id = $request->category_id;
 
         $data->save();
 

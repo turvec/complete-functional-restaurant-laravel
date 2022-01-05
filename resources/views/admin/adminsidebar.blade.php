@@ -30,10 +30,10 @@
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-086-star"></i>
-							<span class="nav-text">Bootstrap</span>
+							<span class="nav-text">Category</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="ui-accordion.html">Accordion</a></li>
+                        <li><a href="{{route('addcategory')}}">Add Category</a></li>
                         </ul>
                     </li>
   
