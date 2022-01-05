@@ -10,7 +10,7 @@ class Category extends Model
 {
     use HasFactory;
     /**
-     * Get all of the comments for the Category
+     * Get all of the foods for the Category
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
