@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('layouts.main');
+        return view('user.home');
         # code...
     }
     public function redirects()
@@ -18,7 +18,7 @@ class HomeController extends Controller
         if ($usertype == '1') {
             return view('layouts.admin');
         } else {
-            return view('home');
+            return view('user.home');
         }
         
         # code...
