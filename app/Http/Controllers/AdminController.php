@@ -55,17 +55,18 @@ class AdminController extends Controller
         return view('admin.allfoods', compact('foods'));
         # code...
     }
-    public function editFood($id)
-    {
-        $food = Food::find($id);
-       return view('admin.editfood', compact('food'));
-    }
+  
     public function deleteFood($id)
     {
         $food = Food::find($id);
         $food->delete();
         return redirect()->back();
         # code...
+    }
+    public function editFood($id)
+    {
+        $food = Food::find($id);
+       return view('admin.editfood', compact('food'));
     }
     public function updateFood(Request $request)
     {
