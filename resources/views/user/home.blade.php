@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-<div >
+<div id="wrapper">
     <div class="hero-wrap fl-wrap full-height">
         <div class="media-container">
 
