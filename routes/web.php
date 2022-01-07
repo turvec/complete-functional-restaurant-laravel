@@ -23,8 +23,9 @@ Route::get('/', [HomeController::class,'index'])->name('home');
 
 Route::get('/redirects', [HomeController::class,'redirects']);
 //
-Route::get('/about', [UserController::class,'about'])->name('about');
-Route::get('/food-menu', [UserController::class,'menu'])->name('menu');
+Route::get('/about', [UserController::class,'showAbout'])->name('about');
+Route::get('/food-menu', [UserController::class,'showMenu'])->name('menu');
+Route::get('/contact-us', [UserController::class,'showContact'])->name('contact');
 
 Route::get('/add-category', [CategoryController::class,'index'])->name('addcategory');
 Route::post('/upload-category', [CategoryController::class,'data'])->name('upload-category');

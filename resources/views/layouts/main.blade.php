@@ -72,19 +72,18 @@
                                     </li>
                                     <li><a href="{{route('menu')}}">Food Menu</a></li>
                                     <li><a href="{{route('about')}}">About</a></li>
-                                    <li><a href="">Contact</a></li>
-                                    <li><a href="blog.html">News</a></li>
+                                    <li><a href="{{route('contact')}}">Contact</a></li>
+                                    <li><a href="">News</a></li>
                                     <li>
                                         <a href="#">Pages<i class="fas fa-caret-down"></i></a>
                                         <!--second level -->
                                         <ul>
-                                            <li><a href="shop.html">Shop</a></li>
-                                            <li><a href="product-single.html">Product Single</a></li>
-                                            <li><a href="cart.html">Cart</a></li>
-                                            <li><a href="gallery.html">Gallery</a></li>
-                                            <li><a href="blog-single.html">Blog single</a></li>
-                                            <li><a href="404.html">404</a></li>
-                                            <li><a href="coming-soon.html">Coming Soon</a></li>
+                                            <li><a href="">Shop</a></li>
+                                            <li><a href="">Cart</a></li>
+                                            <li><a href="">Gallery</a></li>
+                                            <li><a href="">Blog single</a></li>
+                                            <li><a href="">404</a></li>
+                                            <li><a href="">Coming Soon</a></li>
                                         </ul>
                                         <!--second level end-->
                                     </li>

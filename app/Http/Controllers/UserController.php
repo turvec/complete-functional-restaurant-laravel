@@ -8,15 +8,20 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function about()
+    public function showAbout()
     {
         return view('user.about');
         # code...
     }
-    public function menu()
+    public function showMenu()
     {
         $foods = Food::all();
         return view('user.foodmenu', compact('foods'));
+        # code...
+    }
+    public function showContact()
+    {
+        return view('user.contact');
         # code...
     }
     //
