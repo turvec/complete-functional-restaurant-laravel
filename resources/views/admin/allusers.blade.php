@@ -25,12 +25,6 @@
                                 <table class="table table-sm mb-0 table-striped">
                                     <thead>
                                         <tr>
-                                            <th class=" pr-3">
-                                                <div class="custom-control custom-checkbox mx-2">
-                                                    <input type="checkbox" class="custom-control-input" id="checkAll">
-                                                    <label class="custom-control-label" for="checkAll"></label>
-                                                </div>
-                                            </th>
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Phone</th>
@@ -43,18 +37,12 @@
                                     <tbody id="customers">
                                         @foreach ($users as $user)
                                         <tr class="btn-reveal-trigger">
-                                            <td class="py-2">
-                                                <div class="custom-control custom-checkbox mx-2">
-                                                    <input type="checkbox" class="custom-control-input" id="checkbox1">
-                                                    <label class="custom-control-label" for="checkbox1"></label>
-                                                </div>
-                                            </td>
                                             <td class="py-3">
                                                 <a href="#">
                                                     <div class="media d-flex align-items-center">
                                                         <div class="avatar avatar-xl mr-2">
                                                             <div class=""><img class="rounded-circle img-fluid"
-                                                                    src="admin/images/avatar/5.png" width="30" alt="" />
+                                                                    src="admin/images/avatar/4.jpg" width="30" alt="" />
                                                             </div>
                                                         </div>
                                                         <div class="media-body">
@@ -63,11 +51,11 @@
                                                     </div>
                                                 </a>
                                             </td>
-                                            <td class="py-2"><a href="mailto:ricky@example.com">{{$user->email}}</a>
+                                            <td class="py-2"><a >{{$user->email}}</a>
                                             </td>
-                                            <td class="py-2"> <a href="tel:2012001851">(201) 200-1851</a></td>
+                                            <td class="py-2"> <a >(201) 200-1851</a></td>
                                             <td class="py-2 pl-5">2392 Main Avenue, Penasauka</td>
-                                            <td class="py-2">30/03/2018</td>
+                                            <td class="py-2">{{$user->created_at->format('d/m/Y')}}</td>
                                             <td class="py-2 text-right">
                                                 <div class="dropdown"><button class="btn btn-primary tp-btn-light sharp"
                                                         type="button" data-toggle="dropdown"><span class="fs--1"><svg
@@ -88,9 +76,7 @@
                                                     <div class="dropdown-menu dropdown-menu-right border py-0">
                                                         <div class="py-2">
                                                             @if ($user->usertype == '0')
-                                                            <a class="dropdown-item" href="javascript:void(0);"
-                                                                data-toggle="modal" data-target="#addContactModal"
-                                                                class="btn btn-outline-primary  mr-auto mb-2">Edit</a>
+                                                            <a class="dropdown-item" href="">Edit</a>
 
                                                             <a class="dropdown-item text-danger"
                                                                 href="{{route('deleteuser',$user->id)}}">Delete</a>
@@ -104,38 +90,6 @@
                             </div>
                             </td>
                             </tr>
-                            <!-- Edit modal -->
-                            <div class="modal fade" id="addContactModal">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title">Edit User</h5>
-                                            <button type="button" class="close"
-                                                data-dismiss="modal"><span>&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form method="POST" action="{{route('edituser')}}">@csrf
-                                                <div class="form-group">
-                                                    <label class="text-black font-w500">Name</label>
-                                                    <input value="{{$user->name}}" name="name" type="text"
-                                                        class="form-control">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="text-black font-w500">Email</label>
-                                                    <input value="{{$user->email}}" name="email" type="email"
-                                                        class="form-control">
-                                                    <input value="{{$user->id}}" name="id" type="hidden"
-                                                        class="form-control">
-
-                                                </div>
-                                        <div class="form-group">
-                                            <button class="btn btn-primary">SAVE</button>
-                                        </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         @endforeach
 

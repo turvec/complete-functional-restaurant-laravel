@@ -16,23 +16,14 @@ class AdminController extends Controller
         return view('admin.allusers', compact('users'));
         # code...
     }
-    public function deleteuser($id)
+    public function deleteUser($id)
     {
         $user = User::find($id);
         $user->delete();
         return redirect()->back();
         # code...
     }
-    public function edituser(Request $request)
-    {
-        $user = User::find($request->id);
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->save();
-        return back();
-        # code...
-    }
-
+   
     public function addFood()
     {
         $categories = Category::orderBy('name','asc')->get();
@@ -62,6 +53,18 @@ class AdminController extends Controller
     {
         $foods = Food::all();
         return view('admin.allfoods', compact('foods'));
+        # code...
+    }
+    public function editFood($id)
+    {
+        $food = Food::find($id);
+       return view('admin.editfood', compact('food'));
+    }
+    public function deleteFood($id)
+    {
+        $food = Food::find($id);
+        $food->delete();
+        return redirect()->back();
         # code...
     }
 

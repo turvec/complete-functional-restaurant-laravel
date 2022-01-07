@@ -51,7 +51,7 @@
                                                     </div>
                                                 </a>
                                             </td>
-                                            <td class="py-2"><a>{{$food->price}}</a>
+                                            <td class="py-2"><a>${{$food->price}}</a>
                                             </td>
                                             <td class="py-2"> <a>{{$food->category_id}}</a></td>
                                             <td class="py-2 pl-5">{{$food->description}}</td>
@@ -59,49 +59,14 @@
                                             <td class="py-2 text-right">
                                                     <div class="dropdown"><button class="btn btn-primary tp-btn-light sharp" type="button" data-toggle="dropdown"><span class="fs--1"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="5" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="19" cy="12" r="2"></circle></g></svg></span></button>
                                                         <div class="dropdown-menu dropdown-menu-right border py-0">
-                                                            <div class="py-2"><a class="dropdown-item"  href="#!">Edit</a>
-                                                                href="{{route('deletefood',$food->id)}}">Delete</a></div>
+                                                            <div class="py-2">
+                                                                    <a class="dropdown-item" href="{{route('edit_food',$food->id)}}">Edit</a>
+                                                                <a class="dropdown-item text-danger" href="{{route('deletefood',$food->id)}}">Delete</a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                             </td>
                             </tr>
-                            <!-- Edit modal -->
-                            <div class="modal fade" id="addContactModal">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title">Edit User</h5>
-                                            <button type="button" class="close"
-                                                data-dismiss="modal"><span>&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form method="POST" action="{{route('edituser')}}">@csrf
-                                                <div class="form-group">
-                                                    <label class="text-black font-w500">Name</label>
-                                                    <input value="{{$food->name}}" name="name" type="text"
-                                                        class="form-control">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="text-black font-w500">Email</label>
-                                                    <input value="{{$food->email}}" name="email" type="email"
-                                                        class="form-control">
-                                                    <input value="{{$food->id}}" name="id" type="hidden"
-                                                        class="form-control">
-
-                                                </div>
-                                                {{-- <div class="form-group">
-                    <label
-                    class="text-black font-w500">Password</label>
-                    <input value="{{$user->password}}" name="password" type="text" class="form-control">
-                                        </div> --}}
-                                        <div class="form-group">
-                                            <button class="btn btn-primary">SAVE</button>
-                                        </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         @endforeach
 

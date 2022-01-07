@@ -38,9 +38,13 @@ Route::get('/all-users', [AdminController::class,'getAllusers'])->name('allusers
 
 Route::get('/all-foods', [AdminController::class,'getAllfoods'])->name('allfoods');
 
-Route::get('/delete-user/{id}', [AdminController::class,'deleteuser'])->name('deleteuser');
+Route::get('/delete-user/{id}', [AdminController::class,'deleteUser'])->name('deleteuser');
 
-Route::post('/edit-user', [AdminController::class,'edituser'])->name('edituser');
+Route::get('/edit-food/{id}', [AdminController::class,'editFood'])->name('edit_food');
+
+Route::get('/update-food/{id}', [AdminController::class,'updateFood'])->name('update_food');
+
+Route::get('/delete-food/{id}', [AdminController::class,'deleteFood'])->name('deletefood');
 
 Route::get('/add-food', [AdminController::class,'addFood'])->name('addfood');
 

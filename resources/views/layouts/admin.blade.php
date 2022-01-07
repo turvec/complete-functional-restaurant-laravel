@@ -2,15 +2,18 @@
 
 <!-- Mirrored from d2v79rrf7hys7i.cloudfront.net/xhtml/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jan 2022 22:34:55 GMT -->
 <head>
+    
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>Turvec - Restaurant Admin Dashboard </title>
         <!-- Favicon icon -->
+        <base href="/public">
         <link rel="icon" type="image/png" sizes="16x16" href="admin/images/favicon.png">
         <link rel="stylesheet" href="admin/vendor/chartist/css/chartist.min.css">
         <link href="admin/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
         <link href="admin/css/style.css" rel="stylesheet">
+        
         
     </head>
     <body>
