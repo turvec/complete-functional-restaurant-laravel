@@ -28,11 +28,10 @@
                 <div class="gallery_filter-button btn">Show Filters <i class="fal fa-long-arrow-down"></i></div>
                 <!-- gallery-filters -->
                 <div class="gallery-filters gth">
-                    <a href="#" class="gallery-filter gallery-filter-active" data-filter="*"><span>01.</span>All
-                        Dishes</a>
-                   @foreach ($foods as $food)
-                   <a href="#" class="gallery-filter " data-filter=".{{$food->category_id}}"><span>02.</span>{{$food->category_id}}</a>
-                   @endforeach
+                    <a href="#" class="gallery-filter gallery-filter-active"  data-filter="*"><span>01.</span>All Dishes</a>
+                    <a href="#" class="gallery-filter " data-filter=".3"><span>02.</span>Starter</a>
+                    <a href="#" class="gallery-filter" data-filter=".2"><span>03.</span>Desserts</a>
+                    <a href="#" class="gallery-filter" data-filter=".1"><span>04.</span>Sea Food</a>
                 </div>
                 <!-- gallery-filters end-->
                 <!-- gallery start -->

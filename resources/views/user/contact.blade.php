@@ -3,29 +3,6 @@
 <div>
   <!-- content  -->	
   <div class="content">
-    <section class=" no-padding dark-bg hidden-section">
-        <div class="map-container">
-            <div id="singleMap"></div>
-            <div class="scrollContorl"></div>
-        </div>
-        <!-- map-view-wrap --> 
-        <div class="map-view-wrap">
-            <div class="container">
-                <div class="map-view-wrap_item">
-                    <div class="contact-details">
-                        <h4>Contacts Details</h4>
-                        <ul>
-                            <li><span><i class="fal fa-map-marked-alt"></i> Adress :</span> <a href="#">USA 27TH Brooklyn NY</a></li>
-                            <li><span><i class="fal fa-phone-rotary"></i> Phone :</span> <a href="#">+7(123)987654</a></li>
-                            <li><span><i class="fal fa-mailbox"></i> Mail :</span> <a href="#">yourmail@domain.com</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--map-view-wrap end --> 
-        <div class="brush-dec"></div>
-    </section>
     <!--  section  -->   
     <section class="hidden-section big-padding con-sec" data-scrollax-parent="true" id="sec3">
         <div class="container">
