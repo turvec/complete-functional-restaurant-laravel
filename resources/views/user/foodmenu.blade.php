@@ -1,6 +1,5 @@
 @extends('layouts.main')
 @section('content')
-<div>
     <!-- content  -->
     <div class="content">
         <!--  section  -->
@@ -72,5 +71,4 @@
         <div class="brush-dec2 brush-dec_bottom"></div>
     </div>
     <!-- content end  -->
-</div>
 @endsection
