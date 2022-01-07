@@ -113,18 +113,15 @@
         </section>
         <!--  section end  -->
         <!-- section   -->
-        <section class="column-section no-padding hidden-section" data-scrollax-parent="true" id="sec4">
-            <div class="column-wrap-bg left-wrap">
-                <div class="bg par-elem " data-bg="images/bg/12.jpg" data-scrollax="properties: { translateY: '30%' }">
+        <section class="column-section no-padding hidden-section" data-scrollax-parent="true">
+            <div class="column-wrap-bg right-wrap">
+                <div class="bg par-elem " data-bg="images/bg/10.jpg" data-scrollax="properties: { translateY: '30%' }">
                 </div>
                 <div class="overlay"></div>
-                <div class="quote-box">
-                    <i class="fal fa-quote-right"></i>
-                    <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                        accusantium."</p>
-                    <div class="signature"><img src="images/signature.png" alt=""></div>
-                    <h4>Kevin Kowalsky - Restaurant�s cheaf</h4>
+                <div class="column-wrap-bg-text">
+                    <h3>Our Store</h3>
+                    <h4>Want to order food home? Visit our online store.</h4>
+                    <a href="about.html" class="btn  ajax">Buy online <i class="fal fa-long-arrow-right"></i></a>
                 </div>
             </div>
             <div class="column-section-wrap left-column-section dark-bg">
@@ -189,7 +186,6 @@
                     <div class="bg" data-bg="images/bg/dec/6.png"></div>
                 </div>
             </div>
-            
         </section>
         <!-- section end -->
         <!--  section    -->
@@ -290,7 +286,7 @@
                     <div class="section-dec sec-dec_top"></div>
                     <div class="section-dec sec-dec_bottom"></div>
                 </div>
-                <a href="about.html" class="btn fl-btn border-btn">Read More About us <i
+            <a href="{{route('menu')}}" class="btn fl-btn border-btn">Explore The Food Menu <i
                         class="fal fa-long-arrow-right"></i></a>
                 <div class="images-collage-item col_par" style="width:120px" data-position-left="83"
                     data-position-top="87" data-zindex="1" data-scrollax="properties: { translateY: '150px' }">
@@ -608,119 +604,21 @@
             </div>
         </section>
         <!--  section  end-->
-        <section data-scrollax-parent="true">
-            <div class="container">
-                <div class="section-title">
-                    <h4>Our awesome team</h4>
-                    <h2>Met Our Chefs</h2>
-                    <div class="dots-separator fl-wrap"><span></span></div>
-                </div>
-                <div class="about-wrap  fl-wrap">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <!-- team-item -->
-                            <div class="team-box">
-                                <div class="team-photo">
-                                    <img src="images/team/1.jpg" alt="" class="respimg">
-                                    <div class="overlay"></div>
-                                    <div class="team-social">
-                                        <span class="ts_title">Follow</span>
-                                        <ul class="no-list-style">
-                                            <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                                            </li>
-                                            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                                            </li>
-                                            <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="team-info fl-wrap">
-                                    <h3> Kevin Gray </h3>
-                                    <h4>Master chef in New York</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua. </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- team-item  end-->
-                        <!-- team-item -->
-                        <div class="col-md-4">
-                            <div class="team-box">
-                                <div class="team-photo">
-                                    <img src="images/team/2.jpg" alt="" class="respimg">
-                                    <div class="overlay"></div>
-                                    <div class="team-social">
-                                        <span class="ts_title">Follow</span>
-                                        <ul class="no-list-style">
-                                            <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                                            </li>
-                                            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                                            </li>
-                                            <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="team-info fl-wrap">
-                                    <h3> Austin Evon </h3>
-                                    <h4>Master chef in Florida</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua. </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- team-item end  -->
-                        <!-- team-item -->
-                        <div class="col-md-4">
-                            <div class="team-box">
-                                <div class="team-photo">
-                                    <img src="images/team/3.jpg" alt="" class="respimg">
-                                    <div class="overlay"></div>
-                                    <div class="team-social">
-                                        <span class="ts_title">Follow</span>
-                                        <ul class="no-list-style">
-                                            <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                                            </li>
-                                            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                                            </li>
-                                            <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="team-info fl-wrap">
-                                    <h3> Taylor Roberts </h3>
-                                    <h4>Master chef in Maiami</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua. </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- team-item end  -->
-                        <div class="col-md-8">
-                            <div class="align-text-block">
-                                <h4>Want to cook something tasty? Read our best recipes.</h4>
-                                <a href="blog.html" class="btn">Recipes Book <i class="fal fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-dec sec-dec_top"></div>
-                </div>
-                <div class="wave-bg wave-bg_right " data-scrollax="properties: { translateY: '-150px' }"></div>
-            </div>
-        </section>
+       
         <!-- section end  -->
         <!-- section   -->
-        <section class="column-section no-padding hidden-section" data-scrollax-parent="true">
-            <div class="column-wrap-bg right-wrap">
-                <div class="bg par-elem " data-bg="images/bg/10.jpg" data-scrollax="properties: { translateY: '30%' }">
+        <section class="column-section no-padding hidden-section" data-scrollax-parent="true" id="sec4">
+            <div class="column-wrap-bg left-wrap">
+                <div class="bg par-elem " data-bg="images/bg/12.jpg" data-scrollax="properties: { translateY: '30%' }">
                 </div>
                 <div class="overlay"></div>
-                <div class="column-wrap-bg-text">
-                    <h3>Our Store</h3>
-                    <h4>Want to order food home? Visit our online store.</h4>
-                    <a href="about.html" class="btn  ajax">Buy online <i class="fal fa-long-arrow-right"></i></a>
+                <div class="quote-box">
+                    <i class="fal fa-quote-right"></i>
+                    <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                        accusantium."</p>
+                    <div class="signature"><img src="images/signature.png" alt=""></div>
+                    <h4>Kevin Kowalsky - Restaurant�s cheaf</h4>
                 </div>
             </div>
             <div class="column-section-wrap dark-bg">
@@ -849,5 +747,87 @@
         </section>
         <!-- section end  -->
     </div>
+    <!--content end -->
+     <!-- footer -->
+     <div class="height-emulator fl-wrap"></div>
+     <footer class="fl-wrap dark-bg fixed-footer">
+         <div class="container">
+             <div class="footer-top fl-wrap">
+                 <a href="index.html" class="footer-logo"><img src="images/logo2.png" alt=""></a>
+                 <div class="lang-wrap"><a href="#" class="act-lang">En</a><span>/</span><a href="#">Fr</a></div>
+                 <div class="footer-social">
+                     <span class="footer-social-title">Follow us :</span>
+                     <ul>
+                         <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                         <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                         <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                         <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
+                     </ul>
+                 </div>
+             </div>
+             <!-- footer-widget-wrap -->
+             <div class="footer-widget-wrap fl-wrap">
+                 <div class="row">
+                     <!-- footer-widget -->
+                     <div class="col-md-4">
+                         <div class="footer-widget">
+                             <div class="footer-widget-title">About us</div>
+                             <div class="footer-widget-content">
+                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                     tempor incididunt ut labore et dolore magna aliqua. Eaque ipsa quae ab illo
+                                     inventore veritatis et quasi architecto. </p>
+                                 <a href="about.html" class="footer-widget-content-link">Read more</a>
+                             </div>
+                         </div>
+                     </div>
+                     <!-- footer-widget  end-->
+                     <!-- footer-widget -->
+                     <div class="col-md-4">
+                         <div class="footer-widget">
+                             <div class="footer-widget-title">Contact info </div>
+                             <div class="footer-widget-content">
+                                 <div class="footer-contacts footer-box fl-wrap">
+                                     <ul>
+                                         <li><span>Call :</span><a href="#">+489756412322</a> , <a
+                                                 href="#">+56897456123</a></li>
+                                         <li><span>Write :</span><a href="#">yourmail@domain.com</a></li>
+                                         <li><span>Find us : </span><a href="#">USA 27TH Brooklyn NY</a></li>
+                                     </ul>
+                                 </div>
+                                 <a href="contacts.html" class="footer-widget-content-link">Get in Touch</a>
+                             </div>
+                         </div>
+                     </div>
+                     <!-- footer-widget  end-->
+                     <!-- footer-widget -->
+                     <div class="col-md-4">
+                         <div class="footer-widget">
+                             <div class="footer-widget-title">Subscribe</div>
+                             <div class="footer-widget-content">
+                                 <div class="subcribe-form fl-wrap">
+                                     <p>Want to be notified when we launch a new template or an udpate. Just sign
+                                         up and we'll send you a notification by email.</p>
+                                     <form id="subscribe" class="fl-wrap">
+                                         <input class="enteremail" name="email" id="subscribe-email"
+                                             placeholder="Your Email" spellcheck="false" type="text">
+                                         <button type="submit" id="subscribe-button"
+                                             class="subscribe-button color-bg">Send </button>
+                                         <label for="subscribe-email" class="subscribe-message"></label>
+                                     </form>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <!-- footer-widget  end-->
+                 </div>
+             </div>
+             <!-- footer-widget-wrap end-->
+             <div class="footer-bottom fl-wrap">
+                 <div class="copyright">&#169; Restabook 2020 . All rights reserved. </div>
+                 <div class="to-top"><span>Back To Top </span><i class="fal fa-angle-double-up"></i></div>
+             </div>
+         </div>
+     </footer>
+     <!-- footer end-->
 </div>
 @endsection
