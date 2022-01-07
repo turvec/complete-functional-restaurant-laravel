@@ -88,7 +88,7 @@
                             </p>
                             <p> Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
                                 molestiae consequatur.</p>
-                            <a href="menu.html" class="btn fl-btn">Explore Our Menu<i
+                            <a href="{{route('about')}}" class="btn fl-btn">More About Us?<i
                                     class="fal fa-long-arrow-right"></i></a>
                         </div>
                     </div>
@@ -127,41 +127,69 @@
                     <h4>Kevin Kowalsky - Restaurant�s cheaf</h4>
                 </div>
             </div>
-            <div class="column-section-wrap dark-bg">
+            <div class="column-section-wrap left-column-section dark-bg">
                 <div class="container">
                     <div class="column-text">
                         <div class="section-title">
-                            <h4>Call For Reservations</h4>
-                            <h2>Opening Hours</h2>
+                            <h4>Book a table</h4>
+                            <h2>Upcoming Events</h2>
                             <div class="dots-separator fl-wrap"><span></span></div>
                         </div>
-                        <div class="work-time fl-wrap">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h3>Sunday to Tuesday</h3>
-                                    <div class="hours">
-                                        09:00<br>
-                                        22:00
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <h3>Friday to Saturday</h3>
-                                    <div class="hours">
-                                        11:00<br>
-                                        19:00
+                        <!-- events-carousel-wrap -->
+                        <div class="events-carousel-wrap fl-wrap">
+                            <div class="events-carousel fl-wrap">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <!-- swiper-slide -->
+                                        <div class="swiper-slide">
+                                            <div class="event-carousel-item">
+                                                <h4>Jazz Band Live Event</h4>
+                                                <span class="event-date">25 may 2020</span>
+                                                <p>Sed ut perspiciatis unde omnis iste natus error sit
+                                                    voluptatem accusantium doloremque laudantium totam aperiam.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <!-- swiper-slide end -->
+                                        <!-- swiper-slide -->
+                                        <div class="swiper-slide">
+                                            <div class="event-carousel-item">
+                                                <h4>Wine and Steak Day</h4>
+                                                <span class="event-date">19 June 2020</span>
+                                                <p>In ut odio libero, at vulputate urna. Nulla tristique mi a
+                                                    massa convallis cursus. Nulla eu mi magna. Etiam suscipit
+                                                    gravida. </p>
+                                            </div>
+                                        </div>
+                                        <!-- swiper-slide end -->
+                                        <!-- swiper-slide -->
+                                        <div class="swiper-slide">
+                                            <div class="event-carousel-item">
+                                                <h4>Freedom Day Celebration</h4>
+                                                <span class="event-date">14 October 2020</span>
+                                                <p>Lorem Ipsum generators on the Internet king this the first
+                                                    true generator laudantium totam aperiam. </p>
+                                            </div>
+                                        </div>
+                                        <!-- swiper-slide end -->
                                     </div>
                                 </div>
                             </div>
+                            <div class="ec-button ec-button-prev"><i class="fas fa-caret-left"></i></div>
+                            <div class="ec-button ec-button-next"><i class="fas fa-caret-right"></i></div>
                         </div>
                         <div class="clearfix"></div>
                         <div class="bold-separator"><span></span></div>
-                        <div class="big-number"><a href="#">+7(111)123456789</a></div>
+                        <!-- events-carousel-wrap end -->
+                        <a href="#" class="hero_btn no-align show-rb">Book Table Now<i
+                                class="fal fa-long-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="illustration_bg">
-                    <div class="bg" data-bg="images/bg/dec/7.png"></div>
+                    <div class="bg" data-bg="images/bg/dec/6.png"></div>
                 </div>
             </div>
+            
         </section>
         <!-- section end -->
         <!--  section    -->
@@ -695,66 +723,39 @@
                     <a href="about.html" class="btn  ajax">Buy online <i class="fal fa-long-arrow-right"></i></a>
                 </div>
             </div>
-            <div class="column-section-wrap left-column-section dark-bg">
+            <div class="column-section-wrap dark-bg">
                 <div class="container">
                     <div class="column-text">
                         <div class="section-title">
-                            <h4>Book a table</h4>
-                            <h2>Upcoming Events</h2>
+                            <h4>Call For Reservations</h4>
+                            <h2>Opening Hours</h2>
                             <div class="dots-separator fl-wrap"><span></span></div>
                         </div>
-                        <!-- events-carousel-wrap -->
-                        <div class="events-carousel-wrap fl-wrap">
-                            <div class="events-carousel fl-wrap">
-                                <div class="swiper-container">
-                                    <div class="swiper-wrapper">
-                                        <!-- swiper-slide -->
-                                        <div class="swiper-slide">
-                                            <div class="event-carousel-item">
-                                                <h4>Jazz Band Live Event</h4>
-                                                <span class="event-date">25 may 2020</span>
-                                                <p>Sed ut perspiciatis unde omnis iste natus error sit
-                                                    voluptatem accusantium doloremque laudantium totam aperiam.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <!-- swiper-slide end -->
-                                        <!-- swiper-slide -->
-                                        <div class="swiper-slide">
-                                            <div class="event-carousel-item">
-                                                <h4>Wine and Steak Day</h4>
-                                                <span class="event-date">19 June 2020</span>
-                                                <p>In ut odio libero, at vulputate urna. Nulla tristique mi a
-                                                    massa convallis cursus. Nulla eu mi magna. Etiam suscipit
-                                                    gravida. </p>
-                                            </div>
-                                        </div>
-                                        <!-- swiper-slide end -->
-                                        <!-- swiper-slide -->
-                                        <div class="swiper-slide">
-                                            <div class="event-carousel-item">
-                                                <h4>Freedom Day Celebration</h4>
-                                                <span class="event-date">14 October 2020</span>
-                                                <p>Lorem Ipsum generators on the Internet king this the first
-                                                    true generator laudantium totam aperiam. </p>
-                                            </div>
-                                        </div>
-                                        <!-- swiper-slide end -->
+                        <div class="work-time fl-wrap">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3>Sunday to Tuesday</h3>
+                                    <div class="hours">
+                                        09:00<br>
+                                        22:00
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3>Friday to Saturday</h3>
+                                    <div class="hours">
+                                        11:00<br>
+                                        19:00
                                     </div>
                                 </div>
                             </div>
-                            <div class="ec-button ec-button-prev"><i class="fas fa-caret-left"></i></div>
-                            <div class="ec-button ec-button-next"><i class="fas fa-caret-right"></i></div>
                         </div>
                         <div class="clearfix"></div>
                         <div class="bold-separator"><span></span></div>
-                        <!-- events-carousel-wrap end -->
-                        <a href="#" class="hero_btn no-align show-rb">Book Table Now<i
-                                class="fal fa-long-arrow-right"></i></a>
+                        <div class="big-number"><a href="#">+7(111)123456789</a></div>
                     </div>
                 </div>
                 <div class="illustration_bg">
-                    <div class="bg" data-bg="images/bg/dec/6.png"></div>
+                    <div class="bg" data-bg="images/bg/dec/7.png"></div>
                 </div>
             </div>
         </section>
