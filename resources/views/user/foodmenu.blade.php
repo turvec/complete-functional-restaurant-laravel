@@ -31,27 +31,26 @@
                 <div class="gallery-filters gth">
                     <a href="#" class="gallery-filter gallery-filter-active" data-filter="*"><span>01.</span>All
                         Dishes</a>
-                    <a href="#" class="gallery-filter " data-filter=".{{$foods->category->name}}"><span>02.</span>Starter</a>
-                    <a href="#" class="gallery-filter" data-filter=".{{$foods->category->name}}"><span>03.</span>Desserts</a>
-                    <a href="#" class="gallery-filter" data-filter=".{{$foods->category->name}}"><span>04.</span>Sea Food</a>
-                    <a href="#" class="gallery-filter" data-filter=".{{$foods->category->name}}"><span>05.</span>Drinks</a>
+                   @foreach ($foods as $food)
+                   <a href="#" class="gallery-filter " data-filter=".{{$food->category_id}}"><span>02.</span>{{$food->category_id}}</a>
+                   @endforeach
                 </div>
                 <!-- gallery-filters end-->
                 <!-- gallery start -->
                 <div class="gallery-items grid-big-pad  lightgallery three-column fl-wrap" style="margin-bottom:50px;">
                     @foreach ($foods as $food)
                     <!-- gallery-item-->
-                    <div class="gallery-item {{$food->category->name}}">
+                    <div class="gallery-item {{$food->category_id}}">
                         <div class="grid-item-holder hov_zoom">
-                            <a href="images/menu/1.jpg" class="box-media-zoom   popup-image"><i
+                        <a href="/foodimage/{{$food->image}}" class="box-media-zoom   popup-image"><i
                                     class="fal fa-search"></i></a>
-                            <img src="images/menu/1.jpg" alt="">
+                            <img src="/foodimage/{{$food->image}}" alt="">
                         </div>
                         <div class="grid-item-details">
-                            <h3>Soft shell crab <span>Sale -30%</span></h3>
-                            <p>Seasoned with an herb crust, served with au jus and handcarved to order. </p>
+                            <h3>{{$food->title}} <span></span></h3>
+                            <p>{{$food->description}} </p>
                             <div class="grid-item_price">
-                                <span>$29</span>
+                                <span>${{$food->price}} </span>
                                 <div class="add_cart">Add To Cart</div>
                             </div>
                         </div>
