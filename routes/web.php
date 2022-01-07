@@ -36,6 +36,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::get('/all-users', [AdminController::class,'getAllusers'])->name('allusers');
 
+Route::get('/all-foods', [AdminController::class,'getAllfoods'])->name('allfoods');
+
 Route::get('/delete-user/{id}', [AdminController::class,'deleteuser'])->name('deleteuser');
 
 Route::post('/edit-user', [AdminController::class,'edituser'])->name('edituser');

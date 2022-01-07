@@ -16,6 +16,7 @@
 							<span class="nav-text">Foods</span>
 						</a>
                         <ul aria-expanded="false">
+                        <li><a href="{{route('allfoods')}}">View All Foods</a></li>
                         <li><a href="{{route('addfood')}}">Upload a Food</a></li>
                         </ul>
                     </li>

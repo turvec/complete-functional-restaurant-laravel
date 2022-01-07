@@ -58,6 +58,12 @@ class AdminController extends Controller
         return back();
         
     }
+    public function getAllfoods()
+    {
+        $foods = Food::all();
+        return view('admin.allfoods', compact('foods'));
+        # code...
+    }
 
    
     //

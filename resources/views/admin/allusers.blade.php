@@ -129,11 +129,6 @@
                                                         class="form-control">
 
                                                 </div>
-                                                {{-- <div class="form-group">
-                    <label
-                    class="text-black font-w500">Password</label>
-                    <input value="{{$user->password}}" name="password" type="text" class="form-control">
-                                        </div> --}}
                                         <div class="form-group">
                                             <button class="btn btn-primary">SAVE</button>
                                         </div>
