@@ -68,9 +68,22 @@ class AdminController extends Controller
         $food = Food::find($id);
        return view('admin.editfood', compact('food'));
     }
-    public function updateFood(Request $request)
+    public function updateFood(Request $request, $id)
     {
-        return redirect()->back();
+        $update = Food::find($id);
+        if ($request->has('image')) {
+        $xtension = $request->file('image')->getClientOriginalExtension();
+        $imagename = \Str::slug($request->title).time().'.'.$xtension;
+        $request->image->move(public_path('foodimage'),$imagename);
+        $update->image = $imagename;
+        }
+        $update->title = $request->title;
+        $update->price = $request->price;
+        $update->description = $request->description;
+
+        $update->save();
+
+        return back();
         # code...
     }
 
