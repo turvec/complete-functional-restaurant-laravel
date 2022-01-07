@@ -42,7 +42,7 @@ Route::get('/delete-user/{id}', [AdminController::class,'deleteUser'])->name('de
 
 Route::get('/edit-food/{id}', [AdminController::class,'editFood'])->name('edit_food');
 
-Route::get('/update-food/{id}', [AdminController::class,'updateFood'])->name('update_food');
+Route::get('/update-food', [AdminController::class,'updateFood'])->name('update_food');
 
 Route::get('/delete-food/{id}', [AdminController::class,'deleteFood'])->name('deletefood');
 

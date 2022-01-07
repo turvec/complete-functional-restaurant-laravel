@@ -67,6 +67,12 @@ class AdminController extends Controller
         return redirect()->back();
         # code...
     }
+    public function updateFood(Request $request)
+    {
+        return redirect()->back();
+        # code...
+    }
+
 
    
     //

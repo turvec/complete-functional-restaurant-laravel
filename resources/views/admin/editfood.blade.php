@@ -28,6 +28,7 @@
                         <div class="basic-form">
                         <form action="{{route('update_food')}}" method="POST" enctype="multipart/form-data">
                                 @csrf
+                                <input name="id" type="hidden" class="form-control" value="{{$food->id}}">
                                 <div class="input-group mb-4 input-primary">
                                     <div class="input-group-append">
                                         <span class="input-group-text">Title</span>
