@@ -15,6 +15,12 @@ class CreateChefsTable extends Migration
     {
         Schema::create('chefs', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('email');
+            $table->string('phone');
+            $table->string('image');
+            $table->string('profession')->nullable();
+            $table->string('comment')->nullable();
             $table->timestamps();
         });
     }
