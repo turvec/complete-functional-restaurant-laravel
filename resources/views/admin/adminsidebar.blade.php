@@ -25,7 +25,7 @@
 							<span class="nav-text">Chefs</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="{{route('all_chef')}}">View All Chefs</a></li>
+                            <li><a href="{{route('all_chefs')}}">View All Chefs</a></li>
                         <li><a href="{{route('add_chef')}}">Add a chef</a></li>
                             
                         </ul>
