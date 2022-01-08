@@ -51,8 +51,15 @@ Route::get('/add-food', [AdminController::class,'addFood'])->name('addfood');
 
 Route::post('/upload-food', [AdminController::class,'uploadFood'])->name('upload-food');
 
+
 Route::get('/add-chef', [ChefController::class,'addChef'])->name('add_chef');
 
 Route::post('/upload-chef', [ChefController::class,'uploadChef'])->name('upload_chef');
 
 Route::get('/all-chefs', [ChefController::class,'showAllChefs'])->name('all_chefs');
+
+Route::get('/delete-chef/{id}', [ChefController::class,'deleteChef'])->name('delete_chef');
+
+Route::get('/edit-chef/{id}', [ChefController::class,'editChef'])->name('edit_chef');
+
+Route::post('/update-chef/{id}', [ChefController::class,'updateChef'])->name('update_chef');
