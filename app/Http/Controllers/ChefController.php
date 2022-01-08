@@ -16,7 +16,7 @@ class ChefController extends Controller
     {
         $ext = $request->file('image')->getClientOriginalExtension();
         $imagename = \Str::slug($request->name).time().'.'.$ext;
-        $request->image->move(public_path('chefimage'),$imagename)
+        $request->image->move(public_path('chefimage'),$imagename);
 
         $data = new Chef();
         $data->name = $request->name;
@@ -24,6 +24,16 @@ class ChefController extends Controller
         $data->phone = $request->phone;
         $data->profession = $request->profession;
         $data->comment = $request->comment;
+        $data->image = $request->image;
+        $data->save();
+
+        return back();
+        # code...
+    }
+    public function showAllChefs()
+    {
+        $chefs = Chef::all();
+        return view('admin.allchefs',compact('chefs'));
         # code...
     }
     //

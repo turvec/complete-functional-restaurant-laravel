@@ -22,10 +22,11 @@
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-041-graph"></i>
-							<span class="nav-text">Charts</span>
+							<span class="nav-text">Chefs</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="chart-flot.html">Flot</a></li>
+                            <li><a href="{{route('all_chef')}}">View All Chefs</a></li>
+                        <li><a href="{{route('add_chef')}}">Add a chef</a></li>
                             
                         </ul>
                     </li>
