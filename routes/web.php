@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ChefController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
@@ -49,3 +50,5 @@ Route::get('/delete-food/{id}', [AdminController::class,'deleteFood'])->name('de
 Route::get('/add-food', [AdminController::class,'addFood'])->name('addfood');
 
 Route::post('/upload-food', [AdminController::class,'uploadFood'])->name('upload-food');
+
+Route::get('/add-chef', [ChefController::class,'addChef'])->name('add_chef');
