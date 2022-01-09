@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -20,7 +21,8 @@ class HomeController extends Controller
         if ($usertype == '1') {
             return view('admin.allusers',compact('users'));
         } else {
-            return view('user.home');
+            $cart_count = Cart::where('user_id',Auth::id())->count();
+            return view('user.home',compact('cart_count'));
         }
         
         # code...

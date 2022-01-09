@@ -24,7 +24,7 @@ class ChefController extends Controller
         $data->phone = $request->phone;
         $data->profession = $request->profession;
         $data->comment = $request->comment;
-        $data->image = $request->image;
+        $data->image = $imagename;
         $data->save();
 
         return back();

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use App\Models\Category;
+use App\Models\Chef;
 use App\Models\Food;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -12,7 +13,8 @@ class UserController extends Controller
 {
     public function showAbout()
     {
-        return view('user.about');
+        $chefs = Chef::all();
+        return view('user.about',compact('chefs'));
         # code...
     }
     public function showMenu()
@@ -28,9 +30,14 @@ class UserController extends Controller
     }
     public function showCart()
     {
-        $carts = Cart::all();
-        return view('user.contact');
-        # code...
+        if (Auth::id()) {
+            $cart_count = Cart::where('user_id',Auth::id())->count();
+            $carts = Cart::where('user_id',Auth::id())->join('food','carts.food_id','=','food.id')->get();
+        return view('user.cart', compact('cart_count','carts'));
+        }
+       else {
+        return redirect('/login');
+       }
     }
     public function addCart(Request $request, $id)
     {
@@ -47,6 +54,13 @@ class UserController extends Controller
             return redirect('/login');
         }
         
+    }
+    public function deleteCart($id)
+    {
+        $data = Cart::find($id);
+        $data->delete();
+        return back();
+        # code...
     }
     //
 }

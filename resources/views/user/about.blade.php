@@ -151,81 +151,32 @@
                 </div>
                 <div class="about-wrap  fl-wrap">
                     <div class="row">
+                        @foreach ($chefs as $chef)
                         <div class="col-md-4">
-                            <!-- team-item -->
-                            <div class="team-box">
-                                <div class="team-photo">
-                                    <img src="images/team/1.jpg" alt="" class="respimg">
-                                    <div class="overlay"></div>
-                                    <div class="team-social">
-                                        <span class="ts_title">Follow</span>
-                                        <ul class="no-list-style">
-                                            <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                            <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
-                                        </ul>
+                                <!-- team-item -->
+                                <div class="team-box">
+                                    <div class="team-photo">
+                                    <img src="/chefimage/{{$chef->image}}" alt="" class="respimg">
+                                        <div class="overlay"></div>
+                                        <div class="team-social">
+                                            <span class="ts_title">Follow</span>
+                                            <ul class="no-list-style">
+                                                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                                <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="team-info fl-wrap">
+                                        <h3>{{$chef->name}} </h3>
+                                        <h4>{{$chef->profession}}</h4>
+                                        <p>{{$chef->comment}} </p>
                                     </div>
                                 </div>
-                                <div class="team-info fl-wrap">
-                                    <h3> Kevin Gray </h3>
-                                    <h4>Master chef in New York</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. </p>
-                                </div>
                             </div>
-                        </div>
-                        <!-- team-item  end-->
-                        <!-- team-item -->
-                        <div class="col-md-4">
-                            <div class="team-box">
-                                <div class="team-photo">
-                                    <img src="images/team/2.jpg" alt="" class="respimg">
-                                    <div class="overlay"></div>
-                                    <div class="team-social">
-                                        <span class="ts_title">Follow</span>
-                                        <ul class="no-list-style">
-                                            <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                            <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="team-info fl-wrap">
-                                    <h3> Austin Evon </h3>
-                                    <h4>Master chef in Florida</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- team-item end  -->
-                        <!-- team-item -->
-                        <div class="col-md-4">
-                            <div class="team-box">
-                                <div class="team-photo">
-                                    <img src="images/team/3.jpg" alt="" class="respimg">
-                                    <div class="overlay"></div>
-                                    <div class="team-social">
-                                        <span class="ts_title">Follow</span>
-                                        <ul class="no-list-style">
-                                            <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                            <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="team-info fl-wrap">
-                                    <h3> Taylor Roberts </h3>
-                                    <h4>Master chef in Maiami</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- team-item end  -->
+                            <!-- team-item  end-->
+                        @endforeach
                         <div class="col-md-8">
                             <div class="align-text-block">
                                 <h4>Want to cook something tasty? Read our best recipes.</h4>

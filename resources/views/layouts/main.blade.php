@@ -55,13 +55,13 @@
                         <div class="show-share-btn showshare htact"><i class="fal fa-bullhorn"></i> <span
                                 class="header-tooltip">Share</span></div>
                         <div class="show-cart sc_btn htact">
-                            <a href=""><i class="fal fa-shopping-bag"></i></a>
+                            <a href="{{route('show_cart')}}"><i class="fal fa-shopping-bag"></i></a>
                             @if (Route::has('login'))
                             @auth
-                            <span class="show-cart_count">on</span>  
+                        <span class="show-cart_count">{{$cart_count}}</span>  
                             @endauth
                             @endif
-                            <a href=""> <span class="header-tooltip">Your Cart</span></a>
+                        <a href="{{route('show_cart')}}"> <span class="header-tooltip">Your Cart</span></a>
                         </div>
                         <!-- nav-button-wrap-->
                         <div class="nav-button-wrap">
@@ -82,7 +82,6 @@
                                     <li><a href="{{route('contact')}}">Contact</a></li>
                                     <li><a href="">News</a></li>
                                     <li>
-                                        @if (Route::has('login'))
                                         @auth
                                         <a href="#">More<i class="fas fa-caret-down"></i></a>
                                         <!--second level -->
@@ -95,10 +94,10 @@
                                                 <li><a href="">Coming Soon</a></li>
                                         </ul>
                                         <!--second level end-->
-                                        @else
-                                        <a href="#">Gallery</a>
                                         @endauth
-                                        @endif
+                                        @guest
+                                        <a href="#">Gallery</a>
+                                        @endguest
                                     </li>
                                     <li>
                                         @if (Route::has('login'))
