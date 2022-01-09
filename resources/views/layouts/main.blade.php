@@ -49,7 +49,7 @@
             <div class="header-inner  fl-wrap">
                 <div class="container">
                     <div class="header-container fl-wrap">
-                        <a href="index.html" class="logo-holder ajax fa-2x">Turvec</a>
+                        <a href="index.html" class="logo-holder ajax fa-1x">Food Republic Restaurant[FRR]</a>
                         <div class="show-reserv_button show-rb"><span>Reservation</span> <i class="fal fa-bookmark"></i>
                         </div>
                         <div class="show-share-btn showshare htact"><i class="fal fa-bullhorn"></i> <span
