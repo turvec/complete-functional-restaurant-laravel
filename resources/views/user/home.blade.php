@@ -753,7 +753,7 @@
      <footer class="fl-wrap dark-bg fixed-footer">
          <div class="container">
              <div class="footer-top fl-wrap">
-                 <a href="index.html" class="footer-logo"><img src="images/mylogo.jpg" alt=""></a>
+             <a href="{{route('home')}}" class="footer-logo"><img src="images/mylogo.jpg" alt=""></a>
                  <div class="lang-wrap"><a href="#" class="act-lang">En</a><span>/</span><a href="#">Fr</a></div>
                  <div class="footer-social">
                      <span class="footer-social-title">Follow us :</span>

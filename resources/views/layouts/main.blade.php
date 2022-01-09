@@ -49,14 +49,20 @@
             <div class="header-inner  fl-wrap">
                 <div class="container">
                     <div class="header-container fl-wrap">
-                        <a href="index.html" class=""><img src="images/mylogo.jpg" alt="" height="60px"></a>
+                        <a href="{{route('home')}}" class=""><img src="images/mylogo.jpg" alt="" height="60px"></a>
                         <div class="show-reserv_button show-rb"><span>Reservation</span> <i class="fal fa-bookmark"></i>
                         </div>
                         <div class="show-share-btn showshare htact"><i class="fal fa-bullhorn"></i> <span
                                 class="header-tooltip">Share</span></div>
-                        <div class="show-cart sc_btn htact"><i class="fal fa-shopping-bag"></i><span
-                                class="show-cart_count">3</span><span class="header-tooltip">Your Cart</span></div>
-                        <!-- nav-button-wrap-->
+                                @if (Route::has('login'))
+                                @auth
+                                <div class="show-cart sc_btn htact"><i class="fal fa-shopping-bag"></i><span
+                                    class="show-cart_count">3</span><span class="header-tooltip">Your Cart</span></div>
+                            <!-- nav-button-wrap--> 
+                                @endauth
+                                
+                                @endif
+                     
                         <div class="nav-button-wrap">
                             <div class="nav-button">
                                 <span></span><span></span><span></span>
@@ -208,7 +214,7 @@
             <footer class="fl-wrap dark-bg fixed-footer">
                 <div class="container">
                     <div class="footer-top fl-wrap">
-                        <a href="index.html" class="footer-logo"><img src="images/mylogo.jpg" alt=""></a>
+                        <a href="{{route('home')}}" class="footer-logo"><img src="images/mylogo.jpg" alt=""></a>
                         <div class="lang-wrap"><a href="#" class="act-lang">En</a><span>/</span><a href="#">Fr</a></div>
                         <div class="footer-social">
                             <span class="footer-social-title">Follow us :</span>
