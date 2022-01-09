@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
 use App\Models\Category;
 use App\Models\Food;
 use Illuminate\Http\Request;
@@ -25,9 +26,16 @@ class UserController extends Controller
         return view('user.contact');
         # code...
     }
-    public function addCart()
+    public function addCart(Request $request, $id)
     {
         if (Auth::id()) {
+
+            $cart = new Cart();
+            $cart->user_id = Auth::id();
+            $cart->food_id = $id;
+            $cart->quantity = $request->quantity;
+            $cart->save();
+            
             return back();
         } else {
             return redirect('/login');

@@ -38,7 +38,7 @@
                 <div class="gallery-items grid-big-pad  lightgallery three-column fl-wrap" style="margin-bottom:50px;">
                     @foreach ($foods as $food)
                     <!-- gallery-item-->
-                <form action="{{route('add_cart')}}" method="POST">@csrf
+                <form action="{{route('add_cart',$food->id)}}" method="POST">@csrf
                     <div class="gallery-item {{$food->category_id}}">
                         <div class="grid-item-holder hov_zoom">
                         <a href="/foodimage/{{$food->image}}" class="box-media-zoom   popup-image"><i
@@ -50,10 +50,11 @@
                             <p>{{$food->description}} </p>
                             <div class="grid-item_price">
                                 <span>${{$food->price}} </span>
-                                <div >
-                                    <button type="submit" class="add_cart" >
-                                        <input type="number" name="quantity" min="1" class="form-control" value="1" style="width:60px">
+                                <div class="add_cart" >
                                         Add To Cart
+                                    <input type="number" name="quantity" min="1" class="form-control" value="1" style="width:45px">
+                                    <button type="submit"   >
+                                       add
                                     </button>
                                 </div>
                             </div>
