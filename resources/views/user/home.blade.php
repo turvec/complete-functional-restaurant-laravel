@@ -595,7 +595,7 @@
                         </div>
                         <!--  hero-menu_content end  -->
                         <div class="clearfix"></div>
-                        <a href="menu.html" class="hero_btn" style="margin-left:30px;">View Full Menu <i
+                    <a href="{{route('menu')}}" class="hero_btn" style="margin-left:30px;">View Full Menu <i
                                 class="fal fa-long-arrow-right"></i></a>
                         <a href="#" class="pdf-link">Dowload PDF</a>
                     </div>
