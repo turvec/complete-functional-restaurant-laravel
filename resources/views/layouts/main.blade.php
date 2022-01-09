@@ -6,7 +6,7 @@
 <head>
     <!--=============== basic  ===============-->
     <meta charset="UTF-8">
-    <title>Restabook - Responsive Restaurant / Cafe / Pub Template</title>
+    <title>Turvec - Food Republic Restaurant </title>
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="robots" content="index, follow" />
@@ -231,7 +231,7 @@
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                             tempor incididunt ut labore et dolore magna aliqua. Eaque ipsa quae ab illo
                                             inventore veritatis et quasi architecto. </p>
-                                        <a href="about.html" class="footer-widget-content-link">Read more</a>
+                                        <a href="{{route('about')}}" class="footer-widget-content-link">Read more</a>
                                     </div>
                                 </div>
                             </div>
@@ -249,7 +249,7 @@
                                                 <li><span>Find us : </span><a href="#">USA 27TH Brooklyn NY</a></li>
                                             </ul>
                                         </div>
-                                        <a href="contacts.html" class="footer-widget-content-link">Get in Touch</a>
+                                        <a href="{{route('contact')}}" class="footer-widget-content-link">Get in Touch</a>
                                     </div>
                                 </div>
                             </div>
@@ -278,7 +278,7 @@
                     </div>
                     <!-- footer-widget-wrap end-->
                     <div class="footer-bottom fl-wrap">
-                        <div class="copyright">&#169; Restabook 2020 . All rights reserved. </div>
+                        <div class="copyright">&#169; Turvec 2022 . All rights reserved. </div>
                         <div class="to-top"><span>Back To Top </span><i class="fal fa-angle-double-up"></i></div>
                     </div>
                 </div>
