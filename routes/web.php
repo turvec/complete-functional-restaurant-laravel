@@ -26,6 +26,7 @@ Route::get('/redirects', [HomeController::class,'redirects']);
 //
 Route::get('/about', [UserController::class,'showAbout'])->name('about');
 Route::get('/food-menu', [UserController::class,'showMenu'])->name('menu');
+Route::post('/add-cart', [UserController::class,'addCart'])->name('add_cart');
 Route::get('/contact-us', [UserController::class,'showContact'])->name('contact');
 
 Route::get('/add-category', [CategoryController::class,'index'])->name('addcategory');

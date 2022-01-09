@@ -52,7 +52,7 @@
                                 <span>${{$food->price}} </span>
                                 <div >
                                     <button type="submit" class="add_cart" >
-                                        <input type="number" min="1" class="form-control" value="1" style="width:60px">
+                                        <input type="number" name="quantity" min="1" class="form-control" value="1" style="width:60px">
                                         Add To Cart
                                     </button>
                                 </div>

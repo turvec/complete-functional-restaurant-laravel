@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Food;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -23,6 +24,15 @@ class UserController extends Controller
     {
         return view('user.contact');
         # code...
+    }
+    public function addCart()
+    {
+        if (Auth::id()) {
+            return back();
+        } else {
+            return redirect('/login');
+        }
+        
     }
     //
 }
