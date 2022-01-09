@@ -25,7 +25,7 @@
             <div class="container">
                 <div class="hero-title">
                     <h4>Top Services and Premium Cuisine </h4>
-                    <h2>Welcome to Food Republic Restaurant <span>FRR</span> </h2>
+                    <h2>Welcome to Food Republic Restaurant [<span>FRR</span>] </h2>
                     <a href="menu.html" class="hero_btn">Check out our Menu <i class="fal fa-long-arrow-right"></i></a>
                 </div>
             </div>
