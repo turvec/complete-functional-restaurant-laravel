@@ -26,6 +26,12 @@ class UserController extends Controller
         return view('user.contact');
         # code...
     }
+    public function showCart()
+    {
+        $carts = Cart::all();
+        return view('user.contact');
+        # code...
+    }
     public function addCart(Request $request, $id)
     {
         if (Auth::id()) {
