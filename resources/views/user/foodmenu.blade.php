@@ -38,7 +38,7 @@
                 <div class="gallery-items grid-big-pad  lightgallery three-column fl-wrap" style="margin-bottom:50px;">
                     @foreach ($foods as $food)
                     <!-- gallery-item-->
-                    <form action="" method="POST">@csrf
+                <form action="{{route('add_cart')}}" method="POST">@csrf
                     <div class="gallery-item {{$food->category_id}}">
                         <div class="grid-item-holder hov_zoom">
                         <a href="/foodimage/{{$food->image}}" class="box-media-zoom   popup-image"><i
