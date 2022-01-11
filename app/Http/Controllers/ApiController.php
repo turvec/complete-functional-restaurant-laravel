@@ -17,7 +17,7 @@ class ApiController extends Controller
       $seafoods = Food::where('category_id', '1')->get();
       $desserts = Food::where('category_id', '2')->get();
       $starters = Food::where('category_id', '3')->get();
-      $drinks = Food::where('category_id', '4');
+      $drinks = Food::where('category_id', '4')->get();
 
       return response()->json([
          'all_foods' => $all_foods,
