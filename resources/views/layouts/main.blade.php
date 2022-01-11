@@ -282,9 +282,9 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="fl-wrap">
-                                            <select name="numperson" id="persons" data-placeholder="Table"
+                                            <select name="tables" id="persons" data-placeholder="Tables"
                                                 class="chosen-select no-search-select">
-                                                <option data-display="Table">Choose</option>
+                                                <option data-display="Tables">Choose</option>
                                                 <option value="1">1 Person</option>
                                                 <option value="2">2 People</option>
                                                 <option value="3">3 People</option>
@@ -297,13 +297,13 @@
                                     <div class="clearfix"></div>
                                     <div class="col-sm-6">
                                         <div class="date-container2 fl-wrap">
-                                            <input type="text" placeholder="Date" id="res_date" name="resdate"
+                                            <input type="text" placeholder="Date" id="res_date" name="date"
                                                 value="" />
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="fl-wrap">
-                                            <select name="restime" id="resrv-time" data-placeholder="Time"
+                                            <select name="time" id="resrv-time" data-placeholder="Time"
                                                 class="chosen-select no-search-select">
                                                 <option data-display="Time">Any</option>
                                                 <option value="10:00am">10:00 am</option>
