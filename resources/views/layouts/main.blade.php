@@ -1,3 +1,7 @@
+@php
+    $cart_count = App\Models\Cart::where('user_id',Auth::id())->count();
+@endphp
+
 <!DOCTYPE HTML>
 <html lang="en">
 

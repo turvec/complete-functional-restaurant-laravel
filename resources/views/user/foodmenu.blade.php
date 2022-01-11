@@ -29,9 +29,9 @@
                 <!-- gallery-filters -->
                 <div class="gallery-filters gth">
                     <a href="#" class="gallery-filter gallery-filter-active"  data-filter="*"><span>01.</span>All Dishes</a>
-                    <a href="#" class="gallery-filter " data-filter=".3"><span>02.</span>Starter</a>
-                    <a href="#" class="gallery-filter" data-filter=".2"><span>03.</span>Desserts</a>
-                    <a href="#" class="gallery-filter" data-filter=".1"><span>04.</span>Sea Food</a>
+                    @foreach ($foods as $food)
+                    <a href="#" class="gallery-filter " data-filter=".{{$food->category->name}}"><span>01.</span>{{$food->category->name}}</a>
+                    @endforeach
                 </div>
                 <!-- gallery-filters end-->
                 <!-- gallery start -->
@@ -39,7 +39,7 @@
                     @foreach ($foods as $food)
                     <!-- gallery-item-->
                 <form action="{{route('add_cart',$food->id)}}" method="POST">@csrf
-                    <div class="gallery-item {{$food->category_id}}">
+                    <div class="gallery-item {{$food->category->name}}">
                         <div class="grid-item-holder hov_zoom">
                         <a href="/foodimage/{{$food->image}}" class="box-media-zoom   popup-image"><i
                                     class="fal fa-search"></i></a>

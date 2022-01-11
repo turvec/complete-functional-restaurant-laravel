@@ -21,8 +21,8 @@ class HomeController extends Controller
         if ($usertype == '1') {
             return view('admin.allusers',compact('users'));
         } else {
-            $cart_count = Cart::where('user_id',Auth::id())->count();
-            return view('user.home',compact('cart_count'));
+            
+            return redirect()->route('home');
         }
         
         # code...

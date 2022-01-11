@@ -23,21 +23,21 @@ class AdminController extends Controller
         return redirect()->back();
         # code...
     }
-   
+
     public function addFood()
     {
-        $categories = Category::orderBy('name','asc')->get();
+        $categories = Category::orderBy('name', 'asc')->get();
         return view('admin.addfood', compact('categories'));
         # code...
     }
     public function uploadFood(Request $request)
     {
         $xtension = $request->file('image')->getClientOriginalExtension();
-        $imagename = \Str::slug($request->title).time().'.'.$xtension;
-        $request->image->move(public_path('foodimage'),$imagename);
+        $imagename = \Str::slug($request->title) . time() . '.' . $xtension;
+        $request->image->move(public_path('foodimage'), $imagename);
 
         $data = new Food();
-         
+
         $data->image = $imagename;
         $data->title = $request->title;
         $data->price = $request->price;
@@ -47,7 +47,6 @@ class AdminController extends Controller
         $data->save();
 
         return back();
-        
     }
     public function getAllfoods()
     {
@@ -55,7 +54,7 @@ class AdminController extends Controller
         return view('admin.allfoods', compact('foods'));
         # code...
     }
-  
+
     public function deleteFood($id)
     {
         $food = Food::find($id);
@@ -66,16 +65,16 @@ class AdminController extends Controller
     public function editFood($id)
     {
         $food = Food::find($id);
-       return view('admin.editfood', compact('food'));
+        return view('admin.editfood', compact('food'));
     }
     public function updateFood(Request $request, $id)
     {
         $update = Food::find($id);
         if ($request->has('image')) {
-        $xtension = $request->file('image')->getClientOriginalExtension();
-        $imagename = \Str::slug($request->title).time().'.'.$xtension;
-        $request->image->move(public_path('foodimage'),$imagename);
-        $update->image = $imagename;
+            $xtension = $request->file('image')->getClientOriginalExtension();
+            $imagename = \Str::slug($request->title) . time() . '.' . $xtension;
+            $request->image->move(public_path('foodimage'), $imagename);
+            $update->image = $imagename;
         }
         $update->title = $request->title;
         $update->price = $request->price;
@@ -88,6 +87,6 @@ class AdminController extends Controller
     }
 
 
-   
+
     //
 }
