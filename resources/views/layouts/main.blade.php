@@ -266,7 +266,7 @@
                     </div>
                     <div class="reservation-wrap">
                         <div id="reserv-message"></div>
-                        <form class="custom-form" action="http://restabook.kwst.net/light/php/reservation.php"
+                        <form class="custom-form" action=""
                             name="reservationform" id="reservationform">
                             <fieldset>
                                 <div class="row">
@@ -282,9 +282,9 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="fl-wrap">
-                                            <select name="numperson" id="persons" data-placeholder="Persons"
+                                            <select name="numperson" id="persons" data-placeholder="Table"
                                                 class="chosen-select no-search-select">
-                                                <option data-display="Persons">Any</option>
+                                                <option data-display="Table">Choose</option>
                                                 <option value="1">1 Person</option>
                                                 <option value="2">2 People</option>
                                                 <option value="3">3 People</option>
