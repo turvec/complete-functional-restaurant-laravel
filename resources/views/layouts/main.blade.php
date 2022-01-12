@@ -305,7 +305,7 @@
                                         <div class="fl-wrap">
                                             <select name="time" id="resrv-time" data-placeholder="Time"
                                                 class="chosen-select no-search-select">
-                                                <option data-display="Time">Any</option>
+                                                <option data-display="Time">choose time</option>
                                                 <option value="10:00am">10:00 am</option>
                                                 <option value="11:00am">11:00 am</option>
                                                 <option value="12:00pm">12:00 pm</option>
