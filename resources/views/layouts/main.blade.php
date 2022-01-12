@@ -327,9 +327,11 @@
                                 <textarea name="comment" id="comments" cols="30" rows="3"
                                     placeholder="Your Message:"></textarea>
                                 <div class="clearfix"></div>
-                                <button class="btn color-bg" id="reservation-submit">Reserve Table <i
-                                        class="fal fa-long-arrow-right"></i></button>
+                               
                             </fieldset>
+                            <button class="btn color-bg" type="submit" id="reservation-submit">Reserve Table <i
+                                class="fal fa-long-arrow-right"></i>
+                            </button>
                         </form>
                     </div>
                     <!-- reservation-wrap end-->
