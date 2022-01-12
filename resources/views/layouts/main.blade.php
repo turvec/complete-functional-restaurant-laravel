@@ -269,7 +269,7 @@
                     <form class="custom-form" action="{{route('add_reservation')}}"
                             name="reservationform" id="reservationform">
                             @csrf
-                           
+                            <fieldset>
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <input type="text" name="name" id="name" placeholder="Your Name *" value="" />
@@ -328,7 +328,7 @@
                                     placeholder="Your Message:"></textarea>
                                 <div class="clearfix"></div>
                                
-                            
+                            </fieldset>
                             <button class="btn color-bg" type="submit" id="reservation-submit">Reserve Table <i
                                 class="fal fa-long-arrow-right"></i>
                             </button>
