@@ -266,7 +266,7 @@
                     </div>
                     <div class="reservation-wrap">
                         <div id="reserv-message"></div>
-                        <form class="custom-form" action=""
+                    <form class="custom-form" action="{{route('add_reservation')}}"
                             name="reservationform" id="reservationform">
                             @csrf
                             <fieldset>
