@@ -268,6 +268,7 @@
                         <div id="reserv-message"></div>
                         <form class="custom-form" action=""
                             name="reservationform" id="reservationform">
+                            @csrf
                             <fieldset>
                                 <div class="row">
                                     <div class="col-sm-6">
