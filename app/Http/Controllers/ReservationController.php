@@ -18,6 +18,7 @@ class ReservationController extends Controller
         $data->time = $request->time;
         $data->comment = $request->comment;
         $data->save();
+        return back();
         # code...
     }
     //

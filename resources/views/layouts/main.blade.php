@@ -283,7 +283,7 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="fl-wrap">
-                                            <select name="tables" id="persons" data-placeholder="Tables"
+                                            <select name="table" id="persons" data-placeholder="Tables"
                                                 class="chosen-select no-search-select">
                                                 <option data-display="Tables">Choose</option>
                                                 <option value="1">1 Person</option>
@@ -324,7 +324,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <textarea name="comments" id="comments" cols="30" rows="3"
+                                <textarea name="comment" id="comments" cols="30" rows="3"
                                     placeholder="Your Message:"></textarea>
                                 <div class="clearfix"></div>
                                 <button class="btn color-bg" id="reservation-submit">Reserve Table <i
