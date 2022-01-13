@@ -266,8 +266,7 @@
                     </div>
                     <div class="reservation-wrap">
                         <div id="reserv-message"></div>
-                    <form class="custom-form" action="{{route('add_reservation')}}"
-                            name="reservationform" id="reservationform">
+                    <form class="custom-form" action="{{route('add_reservation')}}" method="POST">
                             @csrf
                             <fieldset>
                                 <div class="row">
@@ -286,11 +285,11 @@
                                             <select name="table" id="persons" data-placeholder="Tables"
                                                 class="chosen-select no-search-select">
                                                 <option data-display="Tables">Choose</option>
-                                                <option value="1">1 Person</option>
-                                                <option value="2">2 People</option>
-                                                <option value="3">3 People</option>
-                                                <option value="4">4 People</option>
-                                                <option value="5">5 People</option>
+                                                <option value="1 Person">1 Person</option>
+                                                <option value="2 People">2 People</option>
+                                                <option value="3 People">3 People</option>
+                                                <option value="4 People">4 People</option>
+                                                <option value="5 People">5 People</option>
                                                 <option value="Banquet">Banquet</option>
                                             </select>
                                         </div>
