@@ -43,7 +43,7 @@
                         <span class="nav-text">Reservation</span>
                     </a>
                     <ul aria-expanded="false">
-                    <li><a href="{{route('addcategory')}}">All Reservation</a></li>
+                    <li><a href="{{route('show-reservation')}}">All Reservation</a></li>
                     </ul>
                 </li>
   
