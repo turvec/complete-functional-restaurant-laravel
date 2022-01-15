@@ -38,6 +38,14 @@
                         <li><a href="{{route('addcategory')}}">Add Category</a></li>
                         </ul>
                     </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <i class="flaticon-086-star"></i>
+                        <span class="nav-text">Reservation</span>
+                    </a>
+                    <ul aria-expanded="false">
+                    <li><a href="{{route('addcategory')}}">All Reservation</a></li>
+                    </ul>
+                </li>
   
             </ul>
         
