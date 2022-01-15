@@ -75,7 +75,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="section-title text-align_left">
-                            <h4>Our story</h4>
+                            <h4>Our </h4>
                             <h2>Few words about us</h2>
                             <div class="dots-separator fl-wrap"><span></span></div>
                         </div>
