@@ -57,6 +57,8 @@ Route::post('/upload-food', [AdminController::class,'uploadFood'])->name('upload
 
 Route::get('/all-reservation', [AdminController::class,'showReservation'])->name('show-reservation');
 
+Route::get('/delete-reservation/{id}', [AdminController::class,'deleteReservation'])->name('delete-reservation');
+
 
 Route::get('/add-chef', [ChefController::class,'addChef'])->name('add_chef');
 

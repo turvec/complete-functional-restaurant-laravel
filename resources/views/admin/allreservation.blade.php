@@ -67,7 +67,7 @@
                                                         <div class="dropdown-menu dropdown-menu-right border py-0">
                                                             <div class="py-2">
                                                                     <a class="dropdown-item" href="">cancel</a>
-                                                                <a class="dropdown-item text-danger" href="{{route('delete-Reservation',$reserve->id)}}">Delete</a>
+                                                                <a class="dropdown-item text-danger" href="{{route('delete-reservation',$reserve->id)}}">Delete</a>
                                                             </div>
                                                         </div>
                                                     </div>
