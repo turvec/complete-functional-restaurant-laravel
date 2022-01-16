@@ -180,7 +180,7 @@
                         <div class="col-md-8">
                             <div class="align-text-block">
                                 <h4>Want to cook something tasty? Read our best recipes.</h4>
-                                <a href="blog.html" class="btn">Recipes Book <i class="fal fa-long-arrow-right"></i></a>
+                                <a class="btn">Recipes Book <i class="fal fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>

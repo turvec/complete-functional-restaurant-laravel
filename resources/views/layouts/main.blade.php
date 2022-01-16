@@ -44,8 +44,8 @@
             <div class="header-top">
                 <div class="container">
                     <div class="lang-wrap"><a href="#" class="act-lang">En</a><span>/</span><a href="#">Fr</a></div>
-                    <div class="header-top_contacts"><a href="#"><span>Call now:</span> +489756412322</a><a
-                            href="#"><span>Write :</span> yourmail@domain.com</a></div>
+                    <div class="header-top_contacts"><a href="#"><span>Call now:</span> 07047792486</a><a
+                            href="#"><span>Write :</span> okaforturvec@gmail.com</a></div>
                 </div>
             </div>
             <!--header-top end -->
@@ -205,10 +205,9 @@
                                     <div class="footer-widget-content">
                                         <div class="footer-contacts footer-box fl-wrap">
                                             <ul>
-                                                <li><span>Call :</span><a href="#">+489756412322</a> , <a
-                                                        href="#">+56897456123</a></li>
-                                                <li><span>Write :</span><a href="#">yourmail@domain.com</a></li>
-                                                <li><span>Find us : </span><a href="#">USA 27TH Brooklyn NY</a></li>
+                                                <li><span>Call :</span><a href="#">07047792486</a></li>
+                                                <li><span>Write :</span><a href="#">okaforturvec@gmail.com</a></li>
+                                                <li><span>Find us : </span><a href="#">AGIP, Port Harcourt City. Nigeria</a></li>
                                             </ul>
                                         </div>
                                         <a href="{{route('contact')}}" class="footer-widget-content-link">Get in Touch</a>

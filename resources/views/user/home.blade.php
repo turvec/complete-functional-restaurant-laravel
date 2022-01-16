@@ -75,7 +75,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="section-title text-align_left">
-                            <h4>About Us</h4>
+                            <h4>Our Story</h4>
                             <h2>Few words about us</h2>
                             <div class="dots-separator fl-wrap"><span></span></div>
                         </div>
@@ -121,7 +121,7 @@
                 <div class="column-wrap-bg-text">
                     <h3>Our Store</h3>
                     <h4>Want to order food home? Visit our online store.</h4>
-                    <a href="about.html" class="btn  ajax">Buy online <i class="fal fa-long-arrow-right"></i></a>
+                    <a  class="btn  ajax">Buy online <i class="fal fa-long-arrow-right"></i></a>
                 </div>
             </div>
             <div class="column-section-wrap left-column-section dark-bg">
@@ -649,7 +649,7 @@
                         </div>
                         <div class="clearfix"></div>
                         <div class="bold-separator"><span></span></div>
-                        <div class="big-number"><a href="#">+7(111)123456789</a></div>
+                        <div class="big-number"><a href="#">+234-7047792486</a></div>
                     </div>
                 </div>
                 <div class="illustration_bg">
@@ -788,10 +788,9 @@
                              <div class="footer-widget-content">
                                  <div class="footer-contacts footer-box fl-wrap">
                                      <ul>
-                                         <li><span>Call :</span><a href="#">+489756412322</a> , <a
-                                                 href="#">+56897456123</a></li>
-                                         <li><span>Write :</span><a href="#">yourmail@domain.com</a></li>
-                                         <li><span>Find us : </span><a href="#">USA 27TH Brooklyn NY</a></li>
+                                         <li><span>Call :</span><a href="#">07047792486</a> </li>
+                                         <li><span>Write :</span><a href="#">okaforturvec@gmail.com</a></li>
+                                         <li><span>Find us : </span><a href="#">AGIP, Port Harcourt city. Nigeria</a></li>
                                      </ul>
                                  </div>
                                  <a href="contacts.html" class="footer-widget-content-link">Get in Touch</a>
@@ -823,7 +822,7 @@
              </div>
              <!-- footer-widget-wrap end-->
              <div class="footer-bottom fl-wrap">
-                 <div class="copyright">&#169; Restabook 2020 . All rights reserved. </div>
+                 <div class="copyright">&#169; Turvec 2022 . All rights reserved. </div>
                  <div class="to-top"><span>Back To Top </span><i class="fal fa-angle-double-up"></i></div>
              </div>
          </div>

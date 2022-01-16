@@ -79,7 +79,7 @@
                             </div>
                             <div class="clearfix"></div>
                             <div class="bold-separator"><span></span></div>
-                            <div class="big-number"><a href="#">+7(111)123456789</a></div>
+                            <div class="big-number"><a href="#">+234-7047792486</a></div>
                         </div>
                         <div class="illustration_bg">
                             <div class="bg"  data-bg="images/bg/dec/6.png"></div>
