@@ -32,7 +32,7 @@ class UserController extends Controller
     {
         if (Auth::id()) {
             $cart_count = Cart::where('user_id',Auth::id())->count();
-            $carts = Cart::where('user_id',Auth::id())->join('food','carts.food_id','=','food.id')->get();
+            $carts = Cart::where('user_id',Auth::id())->get();
         return view('user.cart', compact('cart_count','carts'));
         }
        else {
@@ -59,6 +59,14 @@ class UserController extends Controller
     {
         $data = Cart::find($id);
         $data->delete();
+        return back();
+        # code...
+    }
+    public function updateCart(Request $request, $id)
+    {
+        $data = Cart::find($id);
+        $data->quantity = $request->quantity;
+        $data->save();
         return back();
         # code...
     }

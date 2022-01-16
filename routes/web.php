@@ -30,6 +30,7 @@ Route::get('/food-menu', [UserController::class,'showMenu'])->name('menu');
 Route::get('/show-cart', [UserController::class,'showCart'])->name('show_cart');
 Route::post('/add-cart/{id}', [UserController::class,'addCart'])->name('add_cart');
 Route::get('/delete-cart/{id}', [UserController::class,'deleteCart'])->name('delete_cart');
+Route::post('/update-cart/{id}', [UserController::class,'updateCart'])->name('update_cart');
 Route::get('/contact-us', [UserController::class,'showContact'])->name('contact');
 
 Route::get('/add-category', [CategoryController::class,'index'])->name('addcategory');
