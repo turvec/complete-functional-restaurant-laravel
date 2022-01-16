@@ -60,7 +60,7 @@
                                             min="1" class="order-count">
                                     </td>
                                     <td>
-                                        <h5 class="order-money">${{$cart->food->price}}</h5>
+                                        <h5 class="order-money">${{$cart->food->price * $cart->quantity}}</h5>
                                     </td>
                                     <td class="pr-remove">
                                         <div class="coupon-holder">
