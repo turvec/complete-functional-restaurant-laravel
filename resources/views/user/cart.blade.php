@@ -77,6 +77,9 @@
                                 </tr>
 
                             </form>
+                            @php
+                                $total += $cart->food->price * $cart->quantity;
+                            @endphp
                             @endforeach
 
                         </tbody>
@@ -97,7 +100,7 @@
                             <tbody>
                                 <tr>
                                     <th>Cart Subtotal:</th>
-                                    <td>$240.00</td>
+                                    <td>{{$total}}</td>
                                 </tr>
                                 <tr>
                                     <th>Shipping Total:</th>
@@ -105,7 +108,7 @@
                                 </tr>
                                 <tr>
                                     <th>Total:</th>
-                                    <td>$252.00</td>
+                                    <td>${{$total+12}}</td>
                                 </tr>
                             </tbody>
                         </table>
