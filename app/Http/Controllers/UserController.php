@@ -33,7 +33,6 @@ class UserController extends Controller
         if (Auth::id()) {
             $cart_count = Cart::where('user_id',Auth::id())->count();
             $carts = Cart::where('user_id',Auth::id())->get();
-            $total = '';
         return view('user.cart', compact('cart_count','carts','total'));
         }
        else {
