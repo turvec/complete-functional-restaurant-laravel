@@ -51,9 +51,9 @@
                                                     </div>
                                                 </a>
                                             </td>
-                                            <td class="py-2"><a>${{$food->price}}</a>
+                                            <td class="py-2"><a>#{{ number_format($food->price)}}</a>
                                             </td>
-                                            <td class="py-2"> <a>{{$food->category_id}}</a></td>
+                                            <td class="py-2"> <a>{{$food->category->name}}</a></td>
                                             <td class="py-2 pl-5">{{$food->description}}</td>
                                             <td class="py-2">{{$food->created_at->format('d/m/Y')}}</td>
                                             <td class="py-2 text-right">

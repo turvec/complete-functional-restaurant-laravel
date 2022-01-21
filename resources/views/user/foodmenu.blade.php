@@ -49,7 +49,7 @@
                             <h3>{{$food->title}} <span></span></h3>
                             <p>{{$food->description}} </p>
                             <div class="grid-item_price">
-                                <span>${{$food->price}} </span>
+                                <span>{{ number_format($food->price)}}.00</span>
                                 <div class="add_cart" >
                                         Add To Cart
                                     <input type="number" name="quantity" min="1" class="form-control" value="1" style="width:45px">

@@ -38,7 +38,7 @@
 
                                 <div class="input-group mb-4  input-info">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text">$FoodPrice</span>
+                                        <span class="input-group-text">#FoodPrice</span>
                                     </div>
                                     <input type="num" name="price" class="form-control">
                                     <div class="input-group-append">
