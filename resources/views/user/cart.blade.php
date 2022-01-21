@@ -77,7 +77,6 @@
                                 </tr>
 
                             </form>
-                            
                             @endforeach
 
                         </tbody>
