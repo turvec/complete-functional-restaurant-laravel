@@ -97,7 +97,7 @@
                             <tbody>
                                 <tr>
                                     <th>Cart Subtotal:</th>
-                                    <td>+={{$cart->food->price * $cart->quantity}}</td>
+                                    <td>$243.00</td>
                                 </tr>
                                 <tr>
                                     <th>Shipping Total:</th>
