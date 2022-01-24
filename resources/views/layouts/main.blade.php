@@ -62,7 +62,7 @@
                             <a href="{{route('show_cart')}}"><i class="fal fa-shopping-bag"></i></a>
                             @if (Route::has('login'))
                             @auth
-                        <span class="show-cart_count">{{$cart_count}}</span>  
+                        <span class="show-cart_count">{{$cart_count}}</span>
                             @endauth
                             @endif
                         <a href="{{route('show_cart')}}"> <span class="header-tooltip">Your Cart</span></a>
@@ -90,10 +90,9 @@
                                         <a href="#">More<i class="fas fa-caret-down"></i></a>
                                         <!--second level -->
                                         <ul>
-                                                <li><a href="">Shop</a></li>
-                                                <li><a href="">Cart</a></li>
+                                                <li><a href="{{route('show_reservation')}}">My Reservations</a></li>
+                                                <li><a href="{{route('show_cart')}}">Cart</a></li>
                                                 <li><a href="">Gallery</a></li>
-                                                <li><a href="">Blog single</a></li>
                                                 <li><a href="">404</a></li>
                                                 <li><a href="">Coming Soon</a></li>
                                         </ul>
@@ -109,14 +108,6 @@
                                         <a href="#">{{Auth::user()->name}}<i class="fas fa-caret-down"></i></a>
                                         <!--second level -->
                                         <ul>
-                                            <li>
-                                                <a href="">
-
-                                                    <x-jet-dropdown-link href="{{ route('profile.show') }}">
-                                                        {{ __('Profile') }}
-                                                    </x-jet-dropdown-link>
-                                                </a>
-                                            </li>
                                             <li>
                                                 <a href="">
                                                     <!-- Authentication -->
@@ -148,7 +139,7 @@
                         </div>
                         <!-- navigation  end -->
                         <!-- header-cart_wrap  -->
-                     
+
                         <!-- share-wrapper -->
                         <div class="share-wrapper isShare">
                             <div class="share-container fl-wrap"></div>
@@ -325,7 +316,7 @@
                                 <textarea name="comment" id="comments" cols="30" rows="3"
                                     placeholder="Your Message:"></textarea>
                                 <div class="clearfix"></div>
-                               
+
                             </fieldset>
                             <button class="btn color-bg" type="submit" id="reservation-submit">Reserve Table <i
                                 class="fal fa-long-arrow-right"></i>
