@@ -53,14 +53,14 @@
                                         <h5 class="product-name">{{$cart->food->title}}</h5>
                                     </td>
                                     <td class="hidden-xs">
-                                        <h5 class="order-money">{{ number_format($cart->food->price)}}.00</h5>
+                                        <h5 class="order-money">#{{ number_format($cart->food->price)}}</h5>
                                     </td>
                                     <td>
                                         <input type="number" name="quantity" value="{{$cart->quantity}}" max="50"
                                             min="1" class="order-count">
                                     </td>
                                     <td>
-                                        <h5 class="order-money">{{ number_format($cart->food->price * $cart->quantity)}}.00</h5>
+                                        <h5 class="order-money">#{{ number_format($cart->food->price * $cart->quantity)}}</h5>
                                     </td>
                                     <td class="pr-remove">
                                         <div class="coupon-holder">
@@ -97,15 +97,15 @@
                             <tbody>
                                 <tr>
                                     <th>Cart Subtotal:</th>
-                                    <td>${{number_format($total)}}</td>
+                                    <td>#{{number_format($total)}}</td>
                                 </tr>
                                 <tr>
                                     <th>Shipping Total:</th>
-                                    <td>$12.00</td>
+                                    <td>#12.00</td>
                                 </tr>
                                 <tr>
                                     <th>Total:</th>
-                                <td>${{number_format($total + 12)}}</td>
+                                <td>#{{number_format($total + 12)}}</td>
                                 </tr>
                             </tbody>
                         </table>

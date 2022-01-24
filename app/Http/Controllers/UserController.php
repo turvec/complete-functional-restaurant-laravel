@@ -80,8 +80,8 @@ class UserController extends Controller
             return redirect('/login');
         }
 
-        $reservation_count = Auth::user()->reservation->count();
-        $reservations = Auth::user()->reservation->get();
+        $reservation_count = Reservation::where('user_id', Auth::id())->count();
+        $reservations = Reservation::where('user_id', Auth::id())->get();
         return view('user.reservation', compact('reservation_count', 'reservations'));
     }
     //

@@ -84,7 +84,6 @@
                                     <li><a href="{{route('menu')}}">Food Menu</a></li>
                                     <li><a href="{{route('about')}}">About</a></li>
                                     <li><a href="{{route('contact')}}">Contact</a></li>
-                                    <li><a href="">News</a></li>
                                     <li>
                                         @auth
                                         <a href="#">More<i class="fas fa-caret-down"></i></a>

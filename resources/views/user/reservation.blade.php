@@ -70,8 +70,7 @@
                     </table>
                     <!-- COUPON -->
                     <div class="coupon-holder">
-                        <input type="text" name="cartcoupon" placeholder="Coupon code">
-                        <button type="button" class="btn-a">Apply</button>
+                        <button type="button" class="btn-a">Want to cancel a Reservation?</button>
                     </div>
                     <!-- /COUPON -->
 
