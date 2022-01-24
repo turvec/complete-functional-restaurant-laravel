@@ -28,6 +28,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'phone'
     ];
 
     /**
@@ -68,5 +69,14 @@ class User extends Authenticatable
     public function carts(): HasMany
     {
         return $this->hasMany(Cart::class,);
+    }
+    /**
+     * Get all of the rservations for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function rservations(): HasMany
+    {
+        return $this->hasMany(Reservation::class);
     }
 }

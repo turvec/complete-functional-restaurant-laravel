@@ -97,7 +97,7 @@
                             <tbody>
                                 <tr>
                                     <th>Cart Subtotal:</th>
-                                    <td>$243.00</td>
+                                    <td>${{number_format($total)}}</td>
                                 </tr>
                                 <tr>
                                     <th>Shipping Total:</th>
@@ -105,7 +105,7 @@
                                 </tr>
                                 <tr>
                                     <th>Total:</th>
-                                    <td>$255.00</td>
+                                <td>${{number_format($total + 12)}}</td>
                                 </tr>
                             </tbody>
                         </table>
