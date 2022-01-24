@@ -100,12 +100,12 @@
                                     <td>#{{number_format($total)}}</td>
                                 </tr>
                                 <tr>
-                                    <th>Shipping Total:</th>
-                                    <td>#12.00</td>
+                                    <th>Refunded Payments Total:</th>
+                                    <td>#12.00 -</td>
                                 </tr>
                                 <tr>
                                     <th>Total:</th>
-                                <td>#{{number_format($total + 12)}}</td>
+                                <td>#{{number_format($total - 12)}}</td>
                                 </tr>
                             </tbody>
                         </table>
