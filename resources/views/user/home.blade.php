@@ -323,6 +323,11 @@
                                     <li class="current"><a href="#tab-1"
                                             data-bgtab="images/bg/4.jpg"><span>01.</span>Main dishes</a></li>
                                     <li><a href="#tab-2" data-bgtab="images/bg/6.jpg"><span>02.</span>Starter</a></li>
+                                    <li><a href="#tab-3" data-bgtab="images/bg/7.jpg"><span>03.</span>Desserts</a></li>
+                                    <li><a href="#tab-4" data-bgtab="images/bg/5.jpg"><span>04.</span>Sea
+                                            Food</a></li>
+                                    <li><a href="#tab-5" data-bgtab="images/bg/9.jpg"><span>05.</span>Drinks</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
