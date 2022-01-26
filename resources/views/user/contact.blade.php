@@ -18,23 +18,23 @@
                     </div>
                     <div class="contactform-wrap">
                         <div id="message"></div>
-                        <form  class="custom-form" action="{{route('send-contact')}}" id="contactform">
+                        <form  class="custom-form" action="{{route('send-contact')}}" method="POST">
                             @csrf
                             <fieldset>
                             <div id="message2"></div>
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <input type="text" name="name" id="name2" placeholder="Your Name *" value=""/>
+                                        <input type="text" name="name"  placeholder="Your Name *" value=""/>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text"  name="email" id="email2" placeholder="Email Address *" value=""/>
+                                        <input type="text"  name="email"  placeholder="Email Address *" value=""/>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text"  name="phone" id="phone2" placeholder="Phone *" value=""/>
+                                        <input type="text"  name="phone"  placeholder="Phone *" value=""/>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class=" fl-wrap">
-                                            <select name="subject" id="subject2" class="chosen-select no-search-select">
+                                            <select name="subject"  class="chosen-select no-search-select">
                                                 <option data-display="Subject">Any</option>
                                                 <option value="Upcoming Events">Upcoming Events </option>
                                                 <option value="Book table">Book table</option>
@@ -44,10 +44,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <textarea name="comments"  id="comments2" cols="40" rows="3" placeholder="Your Message:"></textarea>
+                                <textarea name="comments"  cols="40" rows="3" placeholder="Your Message:"></textarea>
                                 <div class="clearfix"></div>
-                                <button class="btn float-btn flat-btn color-bg" id="submit_cnt">Send Message <i class="fal fa-long-arrow-right"></i></button>
+
                             </fieldset>
+                            <button type="submit" class="btn float-btn flat-btn color-bg" >Send Message <i class="fal fa-long-arrow-right"></i></button>
                         </form>
                     </div>
                     <div class="section-dec sec-dec_top"></div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Contact;
 use App\Models\Cart;
 use App\Models\Category;
 use App\Models\Chef;
@@ -9,6 +10,7 @@ use App\Models\Food;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class UserController extends Controller
 {
@@ -35,8 +37,15 @@ class UserController extends Controller
             'email' => 'required|email',
         ]);
 
-        
-        return view('user.contact');
+        $name = $request->name;
+        $email = $request->email;
+        $phone = $request->phone;
+        $subject = $request->subject;
+        $comments = $request->comments;
+
+        Mail::to($email)->send(new Contact($name,$email,$phone,$subject,$comments));
+
+        return back();
         # code...
     }
     public function showCart()
