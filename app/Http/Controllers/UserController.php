@@ -29,6 +29,16 @@ class UserController extends Controller
         return view('user.contact');
         # code...
     }
+    public function sendContact(Request $request)
+    {
+        $data = $request->validate([
+            'email' => 'required|email',
+        ]);
+
+        
+        return view('user.contact');
+        # code...
+    }
     public function showCart()
     {
         if (!Auth::id()) {

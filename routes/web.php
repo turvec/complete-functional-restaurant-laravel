@@ -34,6 +34,7 @@ Route::post('/add-cart/{id}', [UserController::class,'addCart'])->name('add_cart
 Route::get('/delete-cart/{id}', [UserController::class,'deleteCart'])->name('delete_cart');
 Route::post('/update-cart/{id}', [UserController::class,'updateCart'])->name('update_cart');
 Route::get('/contact-us', [UserController::class,'showContact'])->name('contact');
+Route::post('/send-contact-message', [UserController::class,'sendContact'])->name('send-contact');
 
 Route::get('/add-category', [CategoryController::class,'index'])->name('addcategory');
 Route::post('/upload-category', [CategoryController::class,'data'])->name('upload-category');
@@ -76,6 +77,8 @@ Route::get('/edit-chef/{id}', [ChefController::class,'editChef'])->name('edit_ch
 Route::post('/update-chef/{id}', [ChefController::class,'updateChef'])->name('update_chef');
 
 Route::post('/add-reservation', [ReservationController::class,'addReservation'])->name('add_reservation');
+
+Route::get('/payment/callback', [PaymentController::class, 'paymentCallback'])->name('payment_callback');
 
 Route::middleware(['auth'])->prefix('user')->group(function () {
 Route::post('/make-payment', [PaymentController::class, 'makePayment'])->name('pay');

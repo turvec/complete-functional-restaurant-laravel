@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Order extends Model
 {
+
+    protected $guarded = [];
+    
     use HasFactory;
 
     /**

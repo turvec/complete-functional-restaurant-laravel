@@ -93,14 +93,7 @@
                     <!-- CART TOTALS  -->
                     <div class="cart-totals dark-bg fl-wrap">
                         <h3>Cart totals</h3>
-                    <form action="{{route('pay')}}" method="post">
-
-                        @foreach ($carts as $cart)
-                        <input type="hidden" name="food_name[]" value="{{$cart->food->title}}">
-                        <input type="hidden" name="init_price[]" value="{{$cart->food->price}}">
-                        <input type="hidden" name="food_quantity[]" value="{{$cart->food->quantity}}">
-                        <input type="hidden" name="total_price[]" value="{{$cart->food->price * $cart->food->quantity }}">
-                        @endforeach
+                    <form action="{{route('pay')}}" method="post">@csrf
 
                         <table class="total-table">
                             <tbody>
@@ -133,7 +126,7 @@
                         <input type="hidden" name="currency" value="NGN">
                         <input type="hidden" name="metadata" value="{{ json_encode($array = ['key_name' => 'value',]) }}" > {{-- For other necessary things you want to add to your payload. it is optional though --}}
                         <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}"> {{-- required --}}
-                        <input type="hidden" name="callback_url" value="{{ route('payment.callback') }}">
+                        <input type="hidden" name="callback_url" value="{{ route('payment_callback') }}">
 
                         <button type="submit" class="cart-totals_btn color-bg">Proceed to Checkout</button>
                     </form>

@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Payment extends Model
 {
+    protected $guarded = [];
+    
     /**
      * Get the user that owns the Payment
      *

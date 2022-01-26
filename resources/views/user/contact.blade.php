@@ -1,9 +1,9 @@
 @extends('layouts.main')
 @section('content')
 <div>
-  <!-- content  -->	
+  <!-- content  -->
   <div class="content">
-    <!--  section  -->   
+    <!--  section  -->
     <section class="hidden-section big-padding con-sec" data-scrollax-parent="true" id="sec3">
         <div class="container">
             <div class="row">
@@ -18,7 +18,8 @@
                     </div>
                     <div class="contactform-wrap">
                         <div id="message"></div>
-                        <form  class="custom-form" action="http://restabook.kwst.net/light/php/contact.php" name="contactform" id="contactform">
+                        <form  class="custom-form" action="{{route('send-contact')}}" id="contactform">
+                            @csrf
                             <fieldset>
                             <div id="message2"></div>
                                 <div class="row">
@@ -92,7 +93,7 @@
             <div class="bg"  data-bg="images/bg/dec/section-bg.png"></div>
         </div>
     </section>
-    <!--  section end  -->  
+    <!--  section end  -->
     <div class="brush-dec2 brush-dec_bottom"></div>
 </div>
 <!-- content end  -->
