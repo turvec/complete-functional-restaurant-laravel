@@ -93,6 +93,15 @@
                     <!-- CART TOTALS  -->
                     <div class="cart-totals dark-bg fl-wrap">
                         <h3>Cart totals</h3>
+                    <form action="{{route('pay')}}" method="post">
+
+                        @foreach ($carts as $cart)
+                        <input type="hidden" name="food_name[]" value="{{$cart->food->title}}">
+                        <input type="hidden" name="init_price[]" value="{{$cart->food->price}}">
+                        <input type="hidden" name="food_quantity[]" value="{{$cart->food->quantity}}">
+                        <input type="hidden" name="total_price[]" value="{{$cart->food->price * $cart->food->quantity }}">
+                        @endforeach
+
                         <table class="total-table">
                             <tbody>
                                 <tr>
@@ -107,9 +116,27 @@
                                     <th>Total:</th>
                                 <td>#{{number_format($total - 12)}}</td>
                                 </tr>
+                                <tr>
+                                    <th>Door Step Delivery</th>
+                                <td>
+                                    <p>Add delivery address Here</p>
+                                    <input type="text" name="delivery_address">
+                                </td>
+                                </tr>
                             </tbody>
                         </table>
+                        <input type="hidden" name="email" value="{{Auth::user()->email}}"> {{-- required --}}
+                        <input type="hidden" name="phone" value="{{Auth::user()->phone}}"> {{-- required --}}
+                        <input type="hidden" name="amount" value="{{$total - 12}}"> {{-- required in kobo --}}
+                        <input type="hidden" name="orderID" value="345">
+                        <input type="hidden" name="quantity" value="100">
+                        <input type="hidden" name="currency" value="NGN">
+                        <input type="hidden" name="metadata" value="{{ json_encode($array = ['key_name' => 'value',]) }}" > {{-- For other necessary things you want to add to your payload. it is optional though --}}
+                        <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}"> {{-- required --}}
+                        <input type="hidden" name="callback_url" value="{{ route('payment.callback') }}">
+
                         <button type="submit" class="cart-totals_btn color-bg">Proceed to Checkout</button>
+                    </form>
                     </div>
                     <!-- /CART TOTALS  -->
                 </div>

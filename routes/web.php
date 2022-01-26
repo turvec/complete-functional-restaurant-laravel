@@ -6,6 +6,7 @@ use App\Http\Controllers\ChefController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\UserController;
 
@@ -75,3 +76,7 @@ Route::get('/edit-chef/{id}', [ChefController::class,'editChef'])->name('edit_ch
 Route::post('/update-chef/{id}', [ChefController::class,'updateChef'])->name('update_chef');
 
 Route::post('/add-reservation', [ReservationController::class,'addReservation'])->name('add_reservation');
+
+Route::middleware(['auth'])->prefix('user')->group(function () {
+Route::post('/make-payment', [PaymentController::class, 'makePayment'])->name('pay');
+});

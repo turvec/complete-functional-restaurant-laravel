@@ -75,8 +75,26 @@ class User extends Authenticatable
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function rservations(): HasMany
+    public function reservations(): HasMany
     {
         return $this->hasMany(Reservation::class);
+    }
+    /**
+     * Get all of the payments for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function payments(): HasMany
+    {
+        return $this->hasMany(Payment::class,);
+    }
+    /**
+     * Get all of the orders for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function orders(): HasMany
+    {
+        return $this->hasMany(Order::class, );
     }
 }
