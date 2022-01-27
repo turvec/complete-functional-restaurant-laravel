@@ -5,7 +5,7 @@
         <div class="col-xl-12">
             <div class="auth-form">
                 <div class="text-center mb-3">
-                    <a href="index.html"><img src="images/mylogo.jpg" alt=""></a>
+                    <a href="{{route('home')}}"><img src="images/mylogo.jpg" alt="" height="100"></a>
                 </div>
                 <h4 class="text-center mb-4">Sign in your account</h4>
                 @if (session('status'))
