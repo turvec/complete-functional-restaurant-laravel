@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Food;
 use App\Models\Reservation;
+use App\Models\Review;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -99,7 +100,74 @@ class AdminController extends Controller
         # code...
     }
 
+    public function addReviews()
+    {
+        return view('admin.add_reviews');
+    }
 
+    public function uploadReviews(Request $request)
+    {
+        $val = $request->validate([
+            'star_rating' => 'required|min:1|max:5',
+            'comment' => 'required|max:255',
+            'name' => 'required|max:255'
+        ]);
+        $data = new Review();
+        $data->name = $request->name;
+        $data->star_rating = $request->star_rating;
+        $data->comment = $request->comment;
+        if ($request->has('image')) {
+            $ext = $request->file('image')->getClientOriginalExtension();
+            $imagename = \Str::slug($request->name).time().'.'.$ext;
+            $request->image->move(public_path('reviewsimage'),$imagename);
+            $data->image = $request->image;
+        }
+        $data->save();
+
+        return back();
+        # code...
+    }
+    public function showAllReviews()
+    {
+        $reviews = Review::all();
+        return view('admin.allreviews',compact('reviews'));
+        # code...
+    }
+    public function deleteReview($id)
+    {
+        $data = Review::find($id);
+        $data->delete();
+        return redirect()->back();
+        # code...
+    }
+    public function editReview($id)
+    {
+        $review = Review::find($id);
+        return view('admin.update_reviews', compact('review'));
+        # code...
+    }
+    public function updateReview(Request $request, $id)
+    {
+        $val = $request->validate([
+            'star_rating' => 'required|min:1|max:5',
+            'comment' => 'required|max:255',
+            'name' => 'required|max:255'
+        ]);
+        $data = Review::find($id);
+        $data->name = $request->name;
+        $data->star_rating = $request->star_rating;
+        $data->comment = $request->comment;
+        if ($request->has('image')) {
+            $ext = $request->file('image')->getClientOriginalExtension();
+            $imagename = \Str::slug($request->name).time().'.'.$ext;
+            $request->image->move(public_path('reviewsimage'),$imagename);
+            $data->image = $request->image;
+        }
+        $data->save();
+
+        return back();
+        # code...
+    }
 
     //
 }

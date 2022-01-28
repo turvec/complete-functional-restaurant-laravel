@@ -50,10 +50,6 @@ class UserController extends Controller
     }
     public function showCart()
     {
-        if (!Auth::id()) {
-            return redirect('/login');
-        }
-
         $cart_count = Cart::where('user_id', Auth::id())->count();
         $carts = Cart::where('user_id', Auth::id())->get();
 
@@ -95,9 +91,6 @@ class UserController extends Controller
     }
     public function showReservation()
     {
-        if (!Auth::id()) {
-            return redirect('/login');
-        }
 
         $reservation_count = Reservation::where('user_id', Auth::id())->count();
         $reservations = Reservation::where('user_id', Auth::id())->get();

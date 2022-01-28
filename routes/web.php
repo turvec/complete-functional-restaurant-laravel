@@ -28,13 +28,12 @@ Route::get('/redirects', [HomeController::class,'redirects']);
 //
 Route::get('/about', [UserController::class,'showAbout'])->name('about');
 Route::get('/food-menu', [UserController::class,'showMenu'])->name('menu');
-Route::get('/reservation', [UserController::class,'showReservation'])->name('show_reservation');
-Route::get('/show-cart', [UserController::class,'showCart'])->name('show_cart');
+
+
 Route::post('/add-cart/{id}', [UserController::class,'addCart'])->name('add_cart');
 Route::get('/delete-cart/{id}', [UserController::class,'deleteCart'])->name('delete_cart');
 Route::post('/update-cart/{id}', [UserController::class,'updateCart'])->name('update_cart');
 Route::get('/contact-us', [UserController::class,'showContact'])->name('contact');
-Route::post('/send-contact-message', [UserController::class,'sendContact'])->name('send-contact');
 
 Route::get('/add-category', [CategoryController::class,'index'])->name('addcategory');
 Route::post('/upload-category', [CategoryController::class,'data'])->name('upload-category');
@@ -63,6 +62,17 @@ Route::get('/all-reservation', [AdminController::class,'showReservation'])->name
 
 Route::get('/delete-reservation/{id}', [AdminController::class,'deleteReservation'])->name('delete-reservation');
 
+Route::get('/add-reviews', [AdminController::class,'addReviews'])->name('add_reviews');
+
+Route::post('/upload-reviews', [AdminController::class,'uploadReviews'])->name('upload_reviews');
+
+Route::get('/all-reviews', [AdminController::class,'showAllReviews'])->name('all_reviews');
+
+Route::get('/delete-review/{id}', [AdminController::class,'deleteReview'])->name('delete_review');
+
+Route::get('/edit-review/{id}', [AdminController::class,'editReview'])->name('edit_review');
+
+Route::post('/update-review/{id}', [AdminController::class,'updateReview'])->name('update_review');
 
 Route::get('/add-chef', [ChefController::class,'addChef'])->name('add_chef');
 
@@ -81,5 +91,8 @@ Route::post('/add-reservation', [ReservationController::class,'addReservation'])
 Route::get('/payment/callback', [PaymentController::class, 'paymentCallback'])->name('payment_callback');
 
 Route::middleware(['auth'])->prefix('user')->group(function () {
+Route::get('/show-cart', [UserController::class,'showCart'])->name('show_cart');
+Route::get('/reservation', [UserController::class,'showReservation'])->name('show_reservation');
+Route::post('/send-contact-message', [UserController::class,'sendContact'])->name('send-contact');
 Route::post('/make-payment', [PaymentController::class, 'makePayment'])->name('pay');
 });
