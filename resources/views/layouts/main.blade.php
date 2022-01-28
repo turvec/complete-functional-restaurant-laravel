@@ -91,14 +91,15 @@
                                         <ul>
                                                 <li><a href="{{route('show_reservation')}}">My Reservations</a></li>
                                                 <li><a href="{{route('show_cart')}}">Cart</a></li>
-                                                <li><a href="">Gallery</a></li>
-                                                <li><a href="">404</a></li>
+                                                <a href="{{route('explore')}}">Explore</a>
+                                                <li><a href="">Payments</a></li>
+                                                <a href="">Orders</a>
                                                 <li><a href="">Coming Soon</a></li>
                                         </ul>
                                         <!--second level end-->
                                         @endauth
                                         @guest
-                                        <a href="#">Gallery</a>
+                                        <a href="{{route('explore')}}">Explore</a>
                                         @endguest
                                     </li>
                                     <li>

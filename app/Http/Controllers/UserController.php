@@ -18,18 +18,19 @@ class UserController extends Controller
     {
         $chefs = Chef::all();
         return view('user.about', compact('chefs'));
-        # code...
     }
     public function showMenu()
     {
         $foods = Food::all();
         return view('user.foodmenu', compact('foods'));
-        # code...
     }
     public function showContact()
     {
         return view('user.contact');
-        # code...
+    }
+    public function showExplore()
+    {
+        return view('user.explore');
     }
     public function sendContact(Request $request)
     {
@@ -46,7 +47,6 @@ class UserController extends Controller
         Mail::to($email)->send(new Contact($name,$email,$phone,$subject,$comments));
 
         return back();
-        # code...
     }
     public function showCart()
     {
@@ -79,7 +79,6 @@ class UserController extends Controller
         $data = Cart::find($id);
         $data->delete();
         return back();
-        # code...
     }
     public function updateCart(Request $request, $id)
     {
@@ -87,7 +86,6 @@ class UserController extends Controller
         $data->quantity = $request->quantity;
         $data->save();
         return back();
-        # code...
     }
     public function showReservation()
     {
