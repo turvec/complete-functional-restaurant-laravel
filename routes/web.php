@@ -63,6 +63,18 @@ Route::get('/all-reservation', [AdminController::class,'showReservation'])->name
 
 Route::get('/delete-reservation/{id}', [AdminController::class,'deleteReservation'])->name('delete-reservation');
 
+Route::get('/add-event', [AdminController::class,'addEvent'])->name('add_event');
+
+Route::post('/upload-event', [AdminController::class,'uploadEvent'])->name('upload_event');
+
+Route::get('/all-events', [AdminController::class,'showAllEvents'])->name('all_events');
+
+Route::get('/delete-event/{id}', [AdminController::class,'deleteEvent'])->name('delete_event');
+
+Route::get('/edit-event/{id}', [AdminController::class,'editEvent'])->name('edit_event');
+
+Route::post('/update-event/{id}', [AdminController::class,'updateEvent'])->name('update_event');
+
 Route::get('/add-reviews', [AdminController::class,'addReviews'])->name('add_reviews');
 
 Route::post('/upload-reviews', [AdminController::class,'uploadReviews'])->name('upload_reviews');

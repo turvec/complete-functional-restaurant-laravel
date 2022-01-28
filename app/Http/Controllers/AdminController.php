@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Event;
 use App\Models\Food;
 use App\Models\Reservation;
 use App\Models\Review;
@@ -96,6 +97,62 @@ class AdminController extends Controller
     {
         $data = Reservation::find($id);
         $data->delete();
+        return back();
+        # code...
+    }
+
+    public function addEvent()
+    {
+        return view('admin.add_event');
+    }
+    public function uploadEvent(Request $request)
+    {
+        $val = $request->validate([
+            'date' => 'required|date',
+            'description' => 'required|max:255',
+            'title' => 'required|max:255'
+        ]);
+        $data = new Event();
+        $data->title = $request->title;
+        $data->date = $request->date;
+        $data->description = $request->description;
+        $data->save();
+
+        return back();
+        # code...
+    }
+    public function showAllEvents()
+    {
+        $events = Event::all();
+        return view('admin.all_events',compact('events'));
+        # code...
+    }
+    public function deleteEvent($id)
+    {
+        $data = Event::find($id);
+        $data->delete();
+        return redirect()->back();
+        # code...
+    }
+    public function editEvent($id)
+    {
+        $event = Event::find($id);
+        return view('admin.update_event', compact('event'));
+        # code...
+    }
+    public function updateEvent(Request $request, $id)
+    {
+        $val = $request->validate([
+            'date' => 'required|date',
+            'description' => 'required|max:255',
+            'title' => 'required|max:255'
+        ]);
+        $data = new Event();
+        $data->title = $request->title;
+        $data->date = $request->date;
+        $data->description = $request->description;
+        $data->save();
+
         return back();
         # code...
     }
