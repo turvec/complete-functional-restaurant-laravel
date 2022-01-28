@@ -30,18 +30,39 @@
                     <div class="col-md-6">
                         <div class="section-title text-align_left">
                             <h4>Our story</h4>
-                            <h2>Few words about us</h2>
+                            <h2>All about us</h2>
                             <div class="dots-separator fl-wrap"><span></span></div>
                         </div>
                         <div class="text-block ">
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                laudantium totam aperiam. Eaque ipsa quae ab illo inventore veritatis et quasi
-                                architecto beatae vitae dicta sunt.
-                                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
-                                laboriosam, nisi ut aliquid ex ea commodi consequatur.
+                            <p>“We would love to host your next event!
+                                Wether planning an intimate gathering or a larger function,Vanilla is perfect for your
+                                next celebration Vanilla was started in 2007 by Mr Edoro Abebe as the Executive chef, he
+                                is now the current Managing Director. We are a continental a-la-carte restaurant &
+                                cocktail lounge situated in the exclusive Maitama district of Abuja, our goal is to
+                                create a cozy laid back environment, with quality freshly cooked meals and friendly,
+                                attentive service.”
+
                             </p>
-                            <p> Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
-                                molestiae consequatur.</p>
+                            <p> The Restaurant
+                                With a standard sitting capacity of 40 people and an extended capacity of 100, our
+                                restaurant is open from 10 am till late Mondays – Sunday. We have the space and
+                                experience to host functions such as birthdays, company dinners, or any get-together.
+                                The restaurant has an open-plan layout so the possibilities for seating and decor
+                                designs are endless.</p>
+                            <p>
+                                The Lounge
+                                A more relaxed setting than the restaurant, the cocktail lounge suits guests looking for
+                                a comfortable, relaxed, and private hang-out venue. Our resident DJs are on hand every
+                                evening to set the tone and the mixologists ready to serve the mindblowing cocktails.
+
+                            </p>
+                            <p>
+                                Conferencing
+                                You have at your fingertips the recipe for a successful stress-free conference, meeting,
+                                or training exercises with our world-class venue, top range facilities, and experienced
+                                staff.
+                                We have available audio-visual equipment and high-speed broadband internet as part of an
+                                all-inclusive package.</p>
                             <a href="about.html" class="btn fl-btn">Explore Our Menu<i
                                     class="fal fa-long-arrow-right"></i></a>
                         </div>
@@ -153,29 +174,29 @@
                     <div class="row">
                         @foreach ($chefs as $chef)
                         <div class="col-md-4">
-                                <!-- team-item -->
-                                <div class="team-box">
-                                    <div class="team-photo">
+                            <!-- team-item -->
+                            <div class="team-box">
+                                <div class="team-photo">
                                     <img src="/chefimage/{{$chef->image}}" alt="" class="respimg">
-                                        <div class="overlay"></div>
-                                        <div class="team-social">
-                                            <span class="ts_title">Follow</span>
-                                            <ul class="no-list-style">
-                                                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                                <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="team-info fl-wrap">
-                                        <h3>{{$chef->name}} </h3>
-                                        <h4>{{$chef->profession}}</h4>
-                                        <p>{{$chef->comment}} </p>
+                                    <div class="overlay"></div>
+                                    <div class="team-social">
+                                        <span class="ts_title">Follow</span>
+                                        <ul class="no-list-style">
+                                            <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
+                                        </ul>
                                     </div>
                                 </div>
+                                <div class="team-info fl-wrap">
+                                    <h3>{{$chef->name}} </h3>
+                                    <h4>{{$chef->profession}}</h4>
+                                    <p>{{$chef->comment}} </p>
+                                </div>
                             </div>
-                            <!-- team-item  end-->
+                        </div>
+                        <!-- team-item  end-->
                         @endforeach
                         <div class="col-md-8">
                             <div class="align-text-block">

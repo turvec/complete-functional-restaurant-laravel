@@ -80,14 +80,11 @@
                             <div class="dots-separator fl-wrap"><span></span></div>
                         </div>
                         <div class="text-block ">
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                doloremque laudantium totam aperiam. Eaque ipsa quae ab illo inventore veritatis
-                                et quasi architecto beatae vitae dicta sunt.
-                                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
-                                laboriosam, nisi ut aliquid ex ea commodi consequatur.
+                            <p>
+                                Our food is best described as a continental journey through the flavours of the world. We take pride in providing meals prepared with only the freshest, most natural ingredients.
+                                Let us host you!
                             </p>
-                            <p> Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
-                                molestiae consequatur.</p>
+                            <p> Situated in the heart of Uniport on a serene cul-de-sac, with breath-taking views of Turvec event park we offer great food and friendly attentive service in a laid back environment.</p>
                             <a href="{{route('about')}}" class="btn fl-btn">More About Us?<i
                                     class="fal fa-long-arrow-right"></i></a>
                         </div>
@@ -206,7 +203,7 @@
                                         <div class="bg " data-bg="images/services/1.jpg"></div>
                                         <div class="overlay"></div>
                                         <div class="inner">
-                                            <h2>Daily New Fresh Menus</h2>
+                                            <h2>Quality in Tasty Meals and Delicases</h2>
                                             <h4>Start eating better</h4>
                                         </div>
                                         <div class="serv-num">01.</div>
@@ -216,10 +213,10 @@
                                     <div class="cf-inner">
                                         <div class="inner">
                                             <div class="dec-icon">
-                                                <i class="fal fa-fish"></i>
+                                                <i class="fal fa-utensils-alt"></i>
                                             </div>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-                                                in pulvinar neque. Nulla finibus lobortis pulvinar.</p>
+                                            <p>"Not all delicious foods but best quality foods to the satisfaction of all"
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -234,7 +231,7 @@
                                         <div class="bg " data-bg="images/services/2.jpg"></div>
                                         <div class="overlay"></div>
                                         <div class="inner">
-                                            <h2>Fresh Ingredient, Tasty Meals</h2>
+                                            <h2>Fresh Delighting Drinks</h2>
                                             <h4>Quality is the heart</h4>
                                         </div>
                                         <div class="serv-num">02.</div>
@@ -246,8 +243,7 @@
                                             <div class="dec-icon">
                                                 <i class="fal fa-carrot"></i>
                                             </div>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-                                                in pulvinar neque. Nulla finibus lobortis pulvinar.</p>
+                                            <p>“Anything but ordinary drinks, each offering surprises and delights with familiarity and serendipity in equal measure”</p>
                                         </div>
                                     </div>
                                 </div>
@@ -262,8 +258,8 @@
                                         <div class="bg " data-bg="images/services/3.jpg"></div>
                                         <div class="overlay"></div>
                                         <div class="inner">
-                                            <h2>Creative & Talented Chefs</h2>
-                                            <h4>Hot & ready to serve</h4>
+                                            <h2>Exclusive Dinning & Relaxation Spot</h2>
+                                            <h4>Mega Comfort</h4>
                                         </div>
                                         <div class="serv-num">03.</div>
                                     </div>
@@ -272,10 +268,9 @@
                                     <div class="cf-inner">
                                         <div class="inner">
                                             <div class="dec-icon">
-                                                <i class="fal fa-utensils-alt"></i>
+                                                <i class="fal fa-fish"></i>
                                             </div>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-                                                in pulvinar neque. Nulla finibus lobortis pulvinar.</p>
+                                            <p>"Relax and go with the flow, good food and a warm kitchen are what makes a house a home"</p>
                                         </div>
                                     </div>
                                 </div>
@@ -456,11 +451,9 @@
                 <div class="overlay"></div>
                 <div class="quote-box">
                     <i class="fal fa-quote-right"></i>
-                    <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                        accusantium."</p>
+                    <p>"good food and a warm kitchen are what makes a house a home"</p>
                     <div class="signature"><img src="images/signature.png" alt=""></div>
-                    <h4>Kevin Kowalsky - Restaurant�s cheaf</h4>
+                    <h4>Turvec Okafor - Restaurant�s cheaf</h4>
                 </div>
             </div>
             <div class="column-section-wrap dark-bg">
