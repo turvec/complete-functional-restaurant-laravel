@@ -24,5 +24,8 @@ Route::get('/food', [ApiController::class,'food']);
 Route::get('/cart', [ApiController::class,'cart']);
 Route::get('/categories', [ApiController::class,'categories']);
 Route::get('/chefs', [ApiController::class,'chefs']);
+Route::get('/reservations', [ApiController::class,'reservations']);
+Route::get('/events', [ApiController::class,'events']);
+Route::get('/reviews', [ApiController::class,'reviews']);
 
 

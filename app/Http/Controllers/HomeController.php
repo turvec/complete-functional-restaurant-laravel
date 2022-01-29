@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use App\Models\Event;
+use App\Models\Food;
 use App\Models\Review;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -15,9 +16,12 @@ class HomeController extends Controller
     {
         $reviews = Review::all();
         $events = Event::all();
-        return view('user.home', compact('reviews', 'events'));
+        $main_dishes = Food::where('category_id',1);
+        $pizzas = Food::where('category_id',2)->get();
+        $desserts = Food::where('category_id',3)->get();
+        return view('user.home', compact('reviews', 'events','main_dishes','pizzas','desserts'));
     }
-    
+
     public function redirects()
     {
         $users = User::all();

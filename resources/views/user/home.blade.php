@@ -134,38 +134,18 @@
                             <div class="events-carousel fl-wrap">
                                 <div class="swiper-container">
                                     <div class="swiper-wrapper">
+                                        @foreach ($events as $event)
                                         <!-- swiper-slide -->
                                         <div class="swiper-slide">
                                             <div class="event-carousel-item">
-                                                <h4>Jazz Band Live Event</h4>
-                                                <span class="event-date">25 may 2020</span>
-                                                <p>Sed ut perspiciatis unde omnis iste natus error sit
-                                                    voluptatem accusantium doloremque laudantium totam aperiam.
+                                                <h4>{{$event->name}}</h4>
+                                                <span class="event-date">{{$event->date}}</span>
+                                                <p>{{$event->description}}
                                                 </p>
                                             </div>
                                         </div>
                                         <!-- swiper-slide end -->
-                                        <!-- swiper-slide -->
-                                        <div class="swiper-slide">
-                                            <div class="event-carousel-item">
-                                                <h4>Wine and Steak Day</h4>
-                                                <span class="event-date">19 June 2020</span>
-                                                <p>In ut odio libero, at vulputate urna. Nulla tristique mi a
-                                                    massa convallis cursus. Nulla eu mi magna. Etiam suscipit
-                                                    gravida. </p>
-                                            </div>
-                                        </div>
-                                        <!-- swiper-slide end -->
-                                        <!-- swiper-slide -->
-                                        <div class="swiper-slide">
-                                            <div class="event-carousel-item">
-                                                <h4>Freedom Day Celebration</h4>
-                                                <span class="event-date">14 October 2020</span>
-                                                <p>Lorem Ipsum generators on the Internet king this the first
-                                                    true generator laudantium totam aperiam. </p>
-                                            </div>
-                                        </div>
-                                        <!-- swiper-slide end -->
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
@@ -317,11 +297,8 @@
                                 <ul class="tabs-menu     no-list-style change_bg">
                                     <li class="current"><a href="#tab-1"
                                             data-bgtab="images/bg/4.jpg"><span>01.</span>Main dishes</a></li>
-                                    <li><a href="#tab-2" data-bgtab="images/bg/6.jpg"><span>02.</span>Starter</a></li>
-                                    <li><a href="#tab-3" data-bgtab="images/bg/7.jpg"><span>03.</span>Desserts</a></li>
-                                    <li><a href="#tab-4" data-bgtab="images/bg/5.jpg"><span>04.</span>Sea
-                                            Food</a></li>
-                                    <li><a href="#tab-5" data-bgtab="images/bg/9.jpg"><span>05.</span>Drinks</a>
+                                    <li><a href="#tab-2" data-bgtab="images/bg/7.jpg"><span>03.</span>Desserts</a></li>
+                                    <li><a href="#tab-3" data-bgtab="images/bg/9.jpg"><span>05.</span>Drinks</a>
                                     </li>
                                 </ul>
                             </div>
@@ -334,19 +311,20 @@
                                     <div class="tab">
                                         <!--tab -->
                                         <div id="tab-1" class="tab-content first-tab">
+                                            @foreach ($main_dishes as $dish)
                                             <!-- header-menu-item-->
                                             <div class="hero-menu-item">
                                                 <div class="hero-menu-item-title fl-wrap">
-                                                    <h6><span>01.</span>Soft shell crab</h6>
+                                                    <h6><span>01.</span>{{$dish->title}}</h6>
                                                     <div class="hmi-dec"></div>
-                                                    <span class="hero-menu-item-price">$29</span>
+                                                    <span class="hero-menu-item-price">${{$dish->price}}</span>
                                                 </div>
                                                 <div class="hero-menu-item-details">
-                                                    <p>Granny help you treat yourself with a different meal
-                                                        everyday</p>
+                                                    <p>{{$dish->description}}</p>
                                                 </div>
                                             </div>
                                             <!-- header-menu-item end-->
+                                            @endforeach
                                         </div>
                                         <!--tab end -->
                                         <!--tab 2-->
@@ -377,44 +355,6 @@
                                                         <h6><span>01.</span>Soft shell crab</h6>
                                                         <div class="hmi-dec"></div>
                                                         <span class="hero-menu-item-price">$29</span>
-                                                    </div>
-                                                    <div class="hero-menu-item-details">
-                                                        <p>Granny help you treat yourself with a different meal
-                                                            everyday</p>
-                                                    </div>
-                                                </div>
-                                                <!-- header-menu-item end-->
-                                            </div>
-                                        </div>
-                                        <!--tab end -->
-                                        <!--tab 4-->
-                                        <div class="tab">
-                                            <div id="tab-4" class="tab-content">
-                                                <!-- header-menu-item-->
-                                                <div class="hero-menu-item">
-                                                    <div class="hero-menu-item-title fl-wrap">
-                                                        <h6><span>01.</span> Lobster with melted mozarella</h6>
-                                                        <div class="hmi-dec"></div>
-                                                        <span class="hero-menu-item-price">$156</span>
-                                                    </div>
-                                                    <div class="hero-menu-item-details">
-                                                        <p>Granny help you treat yourself with a different meal
-                                                            everyday</p>
-                                                    </div>
-                                                </div>
-                                                <!-- header-menu-item end-->
-                                            </div>
-                                        </div>
-                                        <!--tab end -->
-                                        <!--tab 5-->
-                                        <div class="tab">
-                                            <div id="tab-5" class="tab-content">
-                                                <!-- header-menu-item-->
-                                                <div class="hero-menu-item">
-                                                    <div class="hero-menu-item-title fl-wrap">
-                                                        <h6><span>01.</span>Kiwi Coctail</h6>
-                                                        <div class="hmi-dec"></div>
-                                                        <span class="hero-menu-item-price">$12</span>
                                                     </div>
                                                     <div class="hero-menu-item-details">
                                                         <p>Granny help you treat yourself with a different meal
