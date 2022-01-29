@@ -184,7 +184,7 @@
                                         <div class="overlay"></div>
                                         <div class="inner">
                                             <h2>Quality in Tasty Meals and Delicases</h2>
-                                            <h4>Start eating better</h4>
+                                            <h4>Quality is the heart</h4>
                                         </div>
                                         <div class="serv-num">01.</div>
                                     </div>
@@ -211,8 +211,8 @@
                                         <div class="bg " data-bg="images/services/2.jpg"></div>
                                         <div class="overlay"></div>
                                         <div class="inner">
-                                            <h2>Fresh Delighting Drinks</h2>
-                                            <h4>Quality is the heart</h4>
+                                            <h2>Extraordinary Drinks</h2>
+                                            <h4>Start drinking better</h4>
                                         </div>
                                         <div class="serv-num">02.</div>
                                     </div>
