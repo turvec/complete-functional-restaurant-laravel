@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\Event;
 use App\Models\Review;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -13,9 +14,10 @@ class HomeController extends Controller
     public function index()
     {
         $reviews = Review::all();
-        return view('user.home', compact('reviews'));
-        # code...
+        $events = Event::all();
+        return view('user.home', compact('reviews', 'events'));
     }
+    
     public function redirects()
     {
         $users = User::all();
@@ -27,7 +29,6 @@ class HomeController extends Controller
             return redirect()->route('home');
         }
 
-        # code...
     }
     //
 }
