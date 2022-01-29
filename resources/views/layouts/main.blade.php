@@ -1,5 +1,5 @@
 @php
-    $cart_count = App\Models\Cart::where('user_id',Auth::id())->count();
+$cart_count = App\Models\Cart::where('user_id',Auth::id())->count();
 @endphp
 
 <!DOCTYPE HTML>
@@ -62,10 +62,10 @@
                             <a href="{{route('show_cart')}}"><i class="fal fa-shopping-bag"></i></a>
                             @if (Route::has('login'))
                             @auth
-                        <span class="show-cart_count">{{$cart_count}}</span>
+                            <span class="show-cart_count">{{$cart_count}}</span>
                             @endauth
                             @endif
-                        <a href="{{route('show_cart')}}"> <span class="header-tooltip">Your Cart</span></a>
+                            <a href="{{route('show_cart')}}"> <span class="header-tooltip">Your Cart</span></a>
                         </div>
                         <!-- nav-button-wrap-->
                         <div class="nav-button-wrap">
@@ -89,12 +89,12 @@
                                         <a href="#">More<i class="fas fa-caret-down"></i></a>
                                         <!--second level -->
                                         <ul>
-                                                <li><a href="{{route('show_reservation')}}">My Reservations</a></li>
-                                                <li><a href="{{route('show_cart')}}">Cart</a></li>
-                                                <a href="{{route('explore')}}">Explore</a>
-                                                <li><a href="">Payments</a></li>
-                                                <a href="">Orders</a>
-                                                <li><a href="">Coming Soon</a></li>
+                                            <li><a href="{{route('show_reservation')}}">My Reservations</a></li>
+                                            <li><a href="{{route('show_cart')}}">Cart</a></li>
+                                            <a href="{{route('explore')}}">Explore</a>
+                                            <li><a href="">Payments</a></li>
+                                            <a href="">Orders</a>
+                                            <li><a href="">Coming Soon</a></li>
                                         </ul>
                                         <!--second level end-->
                                         @endauth
@@ -177,51 +177,33 @@
                     <div class="footer-widget-wrap fl-wrap">
                         <div class="row">
                             <!-- footer-widget -->
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <div class="footer-widget">
                                     <div class="footer-widget-title">About us</div>
                                     <div class="footer-widget-content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Eaque ipsa quae ab illo
-                                            inventore veritatis et quasi architecto. </p>
-                                        <a href="{{route('about')}}" class="footer-widget-content-link">Read more</a>
+                                        <p> "Our food is best described as a continental journey through the flavours of
+                                            the world. We take pride in providing meals prepared with only the freshest,
+                                            most natural ingredients.
+                                            Let us host you!" </p>
+                                        <a href="about.html" class="footer-widget-content-link">Read more</a>
                                     </div>
                                 </div>
                             </div>
                             <!-- footer-widget  end-->
                             <!-- footer-widget -->
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <div class="footer-widget">
                                     <div class="footer-widget-title">Contact info </div>
                                     <div class="footer-widget-content">
                                         <div class="footer-contacts footer-box fl-wrap">
                                             <ul>
-                                                <li><span>Call :</span><a href="#">07047792486</a></li>
+                                                <li><span>Call :</span><a href="#">07047792486</a> </li>
                                                 <li><span>Write :</span><a href="#">okaforturvec@gmail.com</a></li>
-                                                <li><span>Find us : </span><a href="#">AGIP, Port Harcourt City. Nigeria</a></li>
+                                                <li><span>Find us : </span><a href="#">AGIP, Port Harcourt city.
+                                                        Nigeria</a></li>
                                             </ul>
                                         </div>
-                                        <a href="{{route('contact')}}" class="footer-widget-content-link">Get in Touch</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- footer-widget  end-->
-                            <!-- footer-widget -->
-                            <div class="col-md-4">
-                                <div class="footer-widget">
-                                    <div class="footer-widget-title">Subscribe</div>
-                                    <div class="footer-widget-content">
-                                        <div class="subcribe-form fl-wrap">
-                                            <p>Want to be notified when we launch a new template or an udpate. Just sign
-                                                up and we'll send you a notification by email.</p>
-                                            <form id="subscribe" class="fl-wrap">
-                                                <input class="enteremail" name="email" id="subscribe-email"
-                                                    placeholder="Your Email" spellcheck="false" type="text">
-                                                <button type="submit" id="subscribe-button"
-                                                    class="subscribe-button color-bg">Send </button>
-                                                <label for="subscribe-email" class="subscribe-message"></label>
-                                            </form>
-                                        </div>
+                                        <a href="contacts.html" class="footer-widget-content-link">Get in Touch</a>
                                     </div>
                                 </div>
                             </div>
@@ -256,7 +238,7 @@
                     </div>
                     <div class="reservation-wrap">
                         <div id="reserv-message"></div>
-                    <form class="custom-form" action="{{route('add_reservation')}}" method="POST">
+                        <form class="custom-form" action="{{route('add_reservation')}}" method="POST">
                             @csrf
                             <fieldset>
                                 <div class="row">
@@ -287,8 +269,7 @@
                                     <div class="clearfix"></div>
                                     <div class="col-sm-6">
                                         <div class="date-container2 fl-wrap">
-                                            <input type="text" placeholder="Date" id="res_date" name="date"
-                                                value="" />
+                                            <input type="text" placeholder="Date" id="res_date" name="date" value="" />
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
@@ -319,7 +300,7 @@
 
                             </fieldset>
                             <button class="btn color-bg" type="submit" id="reservation-submit">Reserve Table <i
-                                class="fal fa-long-arrow-right"></i>
+                                    class="fal fa-long-arrow-right"></i>
                             </button>
                         </form>
                     </div>

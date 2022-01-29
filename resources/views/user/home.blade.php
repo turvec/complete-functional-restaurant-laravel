@@ -81,10 +81,10 @@
                         </div>
                         <div class="text-block ">
                             <p>
-                                Our food is best described as a continental journey through the flavours of the world. We take pride in providing meals prepared with only the freshest, most natural ingredients.
+                               " Our food is best described as a continental journey through the flavours of the world. We take pride in providing meals prepared with only the freshest, most natural ingredients.
                                 Let us host you!
                             </p>
-                            <p> Situated in the heart of Uniport on a serene cul-de-sac, with breath-taking views of Turvec event park we offer great food and friendly attentive service in a laid back environment.</p>
+                            <p> Situated in the heart of Uniport on a serene cul-de-sac, with breath-taking views of Turvec event park we offer great food and friendly attentive service in a laid back environment."</p>
                             <a href="{{route('about')}}" class="btn fl-btn">More About Us?<i
                                     class="fal fa-long-arrow-right"></i></a>
                         </div>
@@ -330,38 +330,40 @@
                                         <!--tab 2-->
                                         <div class="tab">
                                             <div id="tab-2" class="tab-content">
-                                                <!-- header-menu-item-->
-                                                <div class="hero-menu-item">
-                                                    <div class="hero-menu-item-title fl-wrap">
-                                                        <h6><span>01.</span>Fried Potatoes</h6>
-                                                        <div class="hmi-dec"></div>
-                                                        <span class="hero-menu-item-price">$29</span>
-                                                    </div>
-                                                    <div class="hero-menu-item-details">
-                                                        <p>Granny help you treat yourself with a different meal
-                                                            everyday</p>
-                                                    </div>
+                                                @foreach ($pizzas as $dish)
+                                            <!-- header-menu-item-->
+                                            <div class="hero-menu-item">
+                                                <div class="hero-menu-item-title fl-wrap">
+                                                    <h6><span>01.</span>{{$dish->title}}</h6>
+                                                    <div class="hmi-dec"></div>
+                                                    <span class="hero-menu-item-price">${{$dish->price}}</span>
                                                 </div>
-                                                <!-- header-menu-item end-->
+                                                <div class="hero-menu-item-details">
+                                                    <p>{{$dish->description}}</p>
+                                                </div>
+                                            </div>
+                                            <!-- header-menu-item end-->
+                                            @endforeach
                                             </div>
                                         </div>
                                         <!--tab end -->
                                         <!--tab 3-->
                                         <div class="tab">
                                             <div id="tab-3" class="tab-content">
+                                                @foreach ($desserts as $dish)
                                                 <!-- header-menu-item-->
                                                 <div class="hero-menu-item">
                                                     <div class="hero-menu-item-title fl-wrap">
-                                                        <h6><span>01.</span>Soft shell crab</h6>
+                                                        <h6><span>01.</span>{{$dish->title}}</h6>
                                                         <div class="hmi-dec"></div>
-                                                        <span class="hero-menu-item-price">$29</span>
+                                                        <span class="hero-menu-item-price">${{$dish->price}}</span>
                                                     </div>
                                                     <div class="hero-menu-item-details">
-                                                        <p>Granny help you treat yourself with a different meal
-                                                            everyday</p>
+                                                        <p>{{$dish->description}}</p>
                                                     </div>
                                                 </div>
                                                 <!-- header-menu-item end-->
+                                                @endforeach
                                             </div>
                                         </div>
                                         <!--tab end -->
@@ -393,7 +395,7 @@
                     <i class="fal fa-quote-right"></i>
                     <p>"good food and a warm kitchen are what makes a house a home"</p>
                     <div class="signature"><img src="images/signature.png" alt=""></div>
-                    <h4>Turvec Okafor - Restaurant�s cheaf</h4>
+                    <h4>Turvec Okafor - Food Republic�s Web Developer & Founder </h4>
                 </div>
             </div>
             <div class="column-section-wrap dark-bg">
@@ -496,20 +498,19 @@
              <div class="footer-widget-wrap fl-wrap">
                  <div class="row">
                      <!-- footer-widget -->
-                     <div class="col-md-4">
+                     <div class="col-md-6">
                          <div class="footer-widget">
                              <div class="footer-widget-title">About us</div>
                              <div class="footer-widget-content">
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                     tempor incididunt ut labore et dolore magna aliqua. Eaque ipsa quae ab illo
-                                     inventore veritatis et quasi architecto. </p>
+                                 <p> "Our food is best described as a continental journey through the flavours of the world. We take pride in providing meals prepared with only the freshest, most natural ingredients.
+                                    Let us host you!" </p>
                                  <a href="about.html" class="footer-widget-content-link">Read more</a>
                              </div>
                          </div>
                      </div>
                      <!-- footer-widget  end-->
                      <!-- footer-widget -->
-                     <div class="col-md-4">
+                     <div class="col-md-6">
                          <div class="footer-widget">
                              <div class="footer-widget-title">Contact info </div>
                              <div class="footer-widget-content">
@@ -521,26 +522,6 @@
                                      </ul>
                                  </div>
                                  <a href="contacts.html" class="footer-widget-content-link">Get in Touch</a>
-                             </div>
-                         </div>
-                     </div>
-                     <!-- footer-widget  end-->
-                     <!-- footer-widget -->
-                     <div class="col-md-4">
-                         <div class="footer-widget">
-                             <div class="footer-widget-title">Subscribe</div>
-                             <div class="footer-widget-content">
-                                 <div class="subcribe-form fl-wrap">
-                                     <p>Want to be notified when we launch a new template or an udpate. Just sign
-                                         up and we'll send you a notification by email.</p>
-                                     <form id="subscribe" class="fl-wrap">
-                                         <input class="enteremail" name="email" id="subscribe-email"
-                                             placeholder="Your Email" spellcheck="false" type="text">
-                                         <button type="submit" id="subscribe-button"
-                                             class="subscribe-button color-bg">Send </button>
-                                         <label for="subscribe-email" class="subscribe-message"></label>
-                                     </form>
-                                 </div>
                              </div>
                          </div>
                      </div>
