@@ -60,7 +60,8 @@
                                             min="1" class="order-count">
                                     </td>
                                     <td>
-                                        <h5 class="order-money">#{{ number_format($cart->food->price * $cart->quantity)}}</h5>
+                                        <h5 class="order-money">
+                                            #{{ number_format($cart->food->price * $cart->quantity)}}</h5>
                                     </td>
                                     <td class="pr-remove">
                                         <div class="coupon-holder">
@@ -93,43 +94,46 @@
                     <!-- CART TOTALS  -->
                     <div class="cart-totals dark-bg fl-wrap">
                         <h3>Cart totals</h3>
-                    <form action="{{route('pay')}}" method="post">@csrf
+                        <form action="{{route('pay')}}" method="post">@csrf
 
-                        <table class="total-table">
-                            <tbody>
-                                <tr>
-                                    <th>Cart Subtotal:</th>
-                                    <td>#{{number_format($total)}}</td>
-                                </tr>
-                                <tr>
-                                    <th>Refunded Payments Total:</th>
-                                    <td>#12.00 -</td>
-                                </tr>
-                                <tr>
-                                    <th>Total:</th>
-                                <td>#{{number_format($total - 12)}}</td>
-                                </tr>
-                                <tr>
-                                    <th>Door Step Delivery</th>
-                                <td>
-                                    <p>Add delivery address Here</p>
-                                    <input type="text" name="delivery_address">
-                                </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <input type="hidden" name="email" value="{{Auth::user()->email}}"> {{-- required --}}
-                        <input type="hidden" name="phone" value="{{Auth::user()->phone}}"> {{-- required --}}
-                        <input type="hidden" name="amount" value="{{$total - 12}}"> {{-- required in kobo --}}
-                        <input type="hidden" name="orderID" value="345">
-                        <input type="hidden" name="quantity" value="100">
-                        <input type="hidden" name="currency" value="NGN">
-                        <input type="hidden" name="metadata" value="{{ json_encode($array = ['key_name' => 'value',]) }}" > {{-- For other necessary things you want to add to your payload. it is optional though --}}
-                        <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}"> {{-- required --}}
-                        <input type="hidden" name="callback_url" value="{{ route('payment_callback') }}">
+                            <table class="total-table">
+                                <tbody>
+                                    <tr>
+                                        <th>Cart Subtotal:</th>
+                                        <td>#{{number_format($total)}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Refunded Payments Total:</th>
+                                        <td>#12.00 -</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Total:</th>
+                                        <td>#{{number_format($total - 12)}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Want a Delivery? </th>
+                                        <td>
+                                            <p class="text-white">Add delivery address Here</p>
+                                            <input type="text" name="delivery_address" class="form-control">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <input type="hidden" name="email" value="{{Auth::user()->email}}"> {{-- required --}}
+                            <input type="hidden" name="phone" value="{{Auth::user()->phone}}"> {{-- required --}}
+                            <input type="hidden" name="amount" value="{{$total - 12}}"> {{-- required in kobo --}}
+                            <input type="hidden" name="orderID" value="345">
+                            <input type="hidden" name="quantity" value="100">
+                            <input type="hidden" name="currency" value="NGN">
+                            <input type="hidden" name="metadata"
+                                value="{{ json_encode($array = ['key_name' => 'value',]) }}">
+                            {{-- For other necessary things you want to add to your payload. it is optional though --}}
+                            <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}">
+                            {{-- required --}}
+                            <input type="hidden" name="callback_url" value="{{ route('payment_callback') }}">
 
-                        <button type="submit" class="cart-totals_btn color-bg">Proceed to Checkout</button>
-                    </form>
+                            <button type="submit" class="cart-totals_btn color-bg">Proceed to Checkout</button>
+                        </form>
                     </div>
                     <!-- /CART TOTALS  -->
                 </div>

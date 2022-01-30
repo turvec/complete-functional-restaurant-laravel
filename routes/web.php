@@ -33,8 +33,10 @@ Route::get('/food-menu', [UserController::class,'showMenu'])->name('menu');
 Route::post('/add-cart/{id}', [UserController::class,'addCart'])->name('add_cart');
 Route::get('/delete-cart/{id}', [UserController::class,'deleteCart'])->name('delete_cart');
 Route::post('/update-cart/{id}', [UserController::class,'updateCart'])->name('update_cart');
+Route::get('/show-cart', [UserController::class,'showCart'])->name('show_cart');
 Route::get('/contact-us', [UserController::class,'showContact'])->name('contact');
 Route::get('/explore', [UserController::class,'showExplore'])->name('explore');
+Route::get('/reservation', [UserController::class,'showReservation'])->name('show_reservation');
 
 Route::get('/add-category', [CategoryController::class,'index'])->name('addcategory');
 Route::post('/upload-category', [CategoryController::class,'data'])->name('upload-category');
@@ -104,8 +106,7 @@ Route::post('/add-reservation', [ReservationController::class,'addReservation'])
 Route::get('/payment/callback', [PaymentController::class, 'paymentCallback'])->name('payment_callback');
 
 Route::middleware(['auth'])->prefix('user')->group(function () {
-Route::get('/show-cart', [UserController::class,'showCart'])->name('show_cart');
-Route::get('/reservation', [UserController::class,'showReservation'])->name('show_reservation');
+
 Route::post('/send-contact-message', [UserController::class,'sendContact'])->name('send-contact');
 Route::post('/make-payment', [PaymentController::class, 'makePayment'])->name('pay');
 });

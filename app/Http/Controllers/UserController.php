@@ -19,7 +19,7 @@ class UserController extends Controller
     {
         $chefs = Chef::all();
         $reviews = Review::all();
-        return view('user.about', compact('chefs','reviews'));
+        return view('user.about', compact('chefs', 'reviews'));
     }
     public function showMenu()
     {
@@ -46,20 +46,24 @@ class UserController extends Controller
         $subject = $request->subject;
         $comments = $request->comments;
 
-        Mail::to($email)->send(new Contact($name,$email,$phone,$subject,$comments));
+        Mail::to($email)->send(new Contact($name, $email, $phone, $subject, $comments));
 
         return back();
     }
     public function showCart()
     {
-        $cart_count = Cart::where('user_id', Auth::id())->count();
-        $carts = Cart::where('user_id', Auth::id())->get();
+        if (Auth::id()) {
+            $cart_count = Cart::where('user_id', Auth::id())->count();
+            $carts = Cart::where('user_id', Auth::id())->get();
 
-        $total = 0;
-        foreach ($carts as $cart ) {
-            $total += $cart->food->price * $cart->quantity;
+            $total = 0;
+            foreach ($carts as $cart) {
+                $total += $cart->food->price * $cart->quantity;
+            }
+            return view('user.cart', compact('cart_count', 'carts', 'total'));
+        } else {
+            return redirect('/login');
         }
-        return view('user.cart', compact('cart_count', 'carts','total'));
     }
     public function addCart(Request $request, $id)
     {
@@ -91,10 +95,13 @@ class UserController extends Controller
     }
     public function showReservation()
     {
-
-        $reservation_count = Reservation::where('user_id', Auth::id())->count();
-        $reservations = Reservation::where('user_id', Auth::id())->get();
-        return view('user.reservation', compact('reservation_count', 'reservations'));
+        if (Auth::id()) {
+            $reservation_count = Reservation::where('user_id', Auth::id())->count();
+            $reservations = Reservation::where('user_id', Auth::id())->get();
+            return view('user.reservation', compact('reservation_count', 'reservations'));
+        } else {
+            return redirect('/login');
+        }
     }
     //
 }

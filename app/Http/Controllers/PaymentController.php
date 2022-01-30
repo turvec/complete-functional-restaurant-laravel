@@ -29,7 +29,7 @@ class PaymentController extends Controller
             ]);
         }
         try {
-            return Paystack::getAuthorizationUrl()->redirectNow();
+            return \Paystack::getAuthorizationUrl()->redirectNow();
         } catch (\Exception $e) {
             $payment->status = 'failed';
             $payment->save();
@@ -42,7 +42,7 @@ class PaymentController extends Controller
     public function paymentCallback()
     {
 
-        $paymentDetails = Paystack::getPaymentData();
+        $paymentDetails = \Paystack::getPaymentData();
 
         dd($paymentDetails);
     }
