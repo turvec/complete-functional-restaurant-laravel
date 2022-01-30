@@ -230,13 +230,13 @@
             </div>
         </section>
         <!--  section  end-->
-        <!--  section  -->
+        <!-- section   -->
         <section>
             <div class="brush-dec2 brush-dec_bottom"></div>
             <div class="container">
                 <div class="section-title">
                     <h4>What said about us</h4>
-                    <h2>Testimonials</h2>
+                    <h2>Customer Reviews</h2>
                     <div class="dots-separator fl-wrap"><span></span></div>
                 </div>
             </div>
@@ -247,73 +247,29 @@
                 <div class="testimonilas-carousel">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
+                            @foreach ($reviews as $review)
                             <!--testi-item-->
                             <div class="swiper-slide">
                                 <div class="testi-item fl-wrap">
-                                    <div class="testi-avatar"><img src="images/avatar/2.jpg" alt=""></div>
+                                    <div class="testi-avatar"><img src="/reviewsimage/{{$review->image}}" alt="no image"></div>
                                     <div class="testimonilas-text fl-wrap">
-                                        <h3>Andy Dimasky</h3>
-                                        <div class="star-rating" data-starrating="5"> </div>
-                                        <p>"Vestibulum orci felis, ullamcorper non condimentum non, ultrices ac nunc.
-                                            Mauris non ligula suscipit, vulputate mi accumsan, dapibus felis. Nullam sed
-                                            sapien dui. Nulla auctor sit amet sem non porta. "</p>
-                                        <span class="testi-number">01.</span>
+                                        <h3>{{$review->name}}</h3>
+                                        <div class="star-rating" data-starrating="{{$review->star_rating}}"> </div>
+                                        <p>"{{$review->comment}}. "
+                                        </p>
+                                        <span class="testi-number">0{{$review->id}}.</span>
                                     </div>
                                 </div>
                             </div>
                             <!--testi-item end-->
-                            <!--testi-item-->
-                            <div class="swiper-slide">
-                                <div class="testi-item fl-wrap">
-                                    <div class="testi-avatar"><img src="images/avatar/3.jpg" alt=""></div>
-                                    <div class="testimonilas-text fl-wrap">
-                                        <h3>Frank Dellov</h3>
-                                        <div class="star-rating" data-starrating="4"> </div>
-                                        <p>"Vestibulum orci felis, ullamcorper non condimentum non, ultrices ac nunc.
-                                            Mauris non ligula suscipit, vulputate mi accumsan, dapibus felis. Nullam sed
-                                            sapien dui. Nulla auctor sit amet sem non porta. "</p>
-                                        <span class="testi-number">02.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--testi-item end-->
-                            <!--testi-item-->
-                            <div class="swiper-slide">
-                                <div class="testi-item fl-wrap">
-                                    <div class="testi-avatar"><img src="images/avatar/4.jpg" alt=""></div>
-                                    <div class="testimonilas-text fl-wrap">
-                                        <h3>Centa Simpson</h3>
-                                        <div class="star-rating" data-starrating="5"> </div>
-                                        <p>"Vestibulum orci felis, ullamcorper non condimentum non, ultrices ac nunc.
-                                            Mauris non ligula suscipit, vulputate mi accumsan, dapibus felis. Nullam sed
-                                            sapien dui. Nulla auctor sit amet sem non porta. "</p>
-                                        <span class="testi-number">03.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--testi-item end-->
-                            <!--testi-item-->
-                            <div class="swiper-slide">
-                                <div class="testi-item fl-wrap">
-                                    <div class="testi-avatar"><img src="images/avatar/5.jpg" alt=""></div>
-                                    <div class="testimonilas-text fl-wrap">
-                                        <h3>Nicolo Svensky</h3>
-                                        <div class="star-rating" data-starrating="5"> </div>
-                                        <p>"Vestibulum orci felis, ullamcorper non condimentum non, ultrices ac nunc.
-                                            Mauris non ligula suscipit, vulputate mi accumsan, dapibus felis. Nullam sed
-                                            sapien dui. Nulla auctor sit amet sem non porta. "</p>
-                                        <span class="testi-number">04.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--testi-item end-->
+                            @endforeach
                         </div>
                     </div>
                 </div>
                 <div class="tc-pagination"></div>
             </div>
         </section>
-        <!--  section  end-->
+        <!-- section end  -->
         <div class="brush-dec2 brush-dec_bottom"></div>
     </div>
     <!-- content end  -->

@@ -388,14 +388,14 @@
         <!-- section   -->
         <section class="column-section no-padding hidden-section" data-scrollax-parent="true" id="sec4">
             <div class="column-wrap-bg left-wrap">
-                <div class="bg par-elem " data-bg="images/bg/12.jpg" data-scrollax="properties: { translateY: '30%' }">
+                <div class="bg par-elem " data-bg="images/bg/founder.jpg" data-scrollax="properties: { translateY: '30%' }">
                 </div>
                 <div class="overlay"></div>
                 <div class="quote-box">
                     <i class="fal fa-quote-right"></i>
                     <p>"good food and a warm kitchen are what makes a house a home"</p>
                     <div class="signature"><img src="images/signature.png" alt=""></div>
-                    <h4>Turvec Okafor - Food Republic�s Web Developer & Founder </h4>
+                    <h4>Turvec Okafor - Food Republic�s Founder & Web Programmer </h4>
                 </div>
             </div>
             <div class="column-section-wrap dark-bg">

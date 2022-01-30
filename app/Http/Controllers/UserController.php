@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Chef;
 use App\Models\Food;
 use App\Models\Reservation;
+use App\Models\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -17,7 +18,8 @@ class UserController extends Controller
     public function showAbout()
     {
         $chefs = Chef::all();
-        return view('user.about', compact('chefs'));
+        $reviews = Review::all();
+        return view('user.about', compact('chefs','reviews'));
     }
     public function showMenu()
     {
