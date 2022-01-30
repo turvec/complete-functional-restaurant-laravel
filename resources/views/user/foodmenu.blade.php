@@ -4,8 +4,7 @@
     <div class="content">
         <!--  section  -->
         <section class="parallax-section hero-section hidden-section" data-scrollax-parent="true">
-            <div class="bg par-elem " data-bg="images/bg/12.jpg" data-scrollax="properties: { translateY: '30%' }">
-            </div>
+            <div class="bg par-elem "  data-bg="images/bg/4.jpg" data-scrollax="properties: { translateY: '30%' }"></div>
             <div class="overlay"></div>
             <div class="container">
                 <div class="section-title">

@@ -73,14 +73,14 @@
                                 <div class="single-slider fl-wrap">
                                     <div class="swiper-container">
                                         <div class="swiper-wrapper lightgallery">
-                                            <div class="swiper-slide hov_zoom"><img src="images/all/4.jpg" alt=""><a
-                                                    href="images/all/4.jpg" class="box-media-zoom   popup-image"><i
+                                            <div class="swiper-slide hov_zoom"><img src="images/all/founder.jpg" alt=""><a
+                                                    href="images/all/founder.jpg" class="box-media-zoom   popup-image"><i
                                                         class="fal fa-search"></i></a></div>
-                                            <div class="swiper-slide hov_zoom"><img src="images/all/1.jpg" alt=""><a
-                                                    href="images/all/1.jpg" class="box-media-zoom   popup-image"><i
+                                            <div class="swiper-slide hov_zoom"><img src="images/all/burger.jpg" alt=""><a
+                                                    href="images/all/burger.jpg" class="box-media-zoom   popup-image"><i
                                                         class="fal fa-search"></i></a></div>
-                                            <div class="swiper-slide hov_zoom"><img src="images/all/2.jpg" alt=""><a
-                                                    href="images/all/2.jpg" class="box-media-zoom   popup-image"><i
+                                            <div class="swiper-slide hov_zoom"><img src="images/all/pizza.jpg" alt=""><a
+                                                    href="images/all/pizza.jpg" class="box-media-zoom   popup-image"><i
                                                         class="fal fa-search"></i></a></div>
                                         </div>
                                         <div class="ss-slider-pagination"></div>
