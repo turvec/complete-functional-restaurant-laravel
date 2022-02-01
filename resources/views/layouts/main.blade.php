@@ -93,7 +93,7 @@ $cart_count = App\Models\Cart::where('user_id',Auth::id())->count();
                                             <li><a href="{{route('show_reservation')}}">My Reservations</a></li>
                                             <li><a href="{{route('show_cart')}}">Cart</a></li>
                                             <a href="{{route('explore')}}">Explore</a>
-                                            <li><a href="">Payments</a></li>
+                                            <li><a href="{{route('show_payment')}}">Payments</a></li>
                                             <a href="">Orders</a>
                                             <li><a href="">Coming Soon</a></li>
                                         </ul>

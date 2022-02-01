@@ -43,7 +43,6 @@ class HomeController extends Controller
         if ($usertype == '1') {
             return view('admin.allusers',compact('users'));
         } else {
-
             return redirect()->route('home');
         }
 

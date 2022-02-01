@@ -9,6 +9,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\UserController;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -106,6 +108,9 @@ Route::post('/add-reservation', [ReservationController::class,'addReservation'])
 
 Route::get('/payment/callback', [PaymentController::class, 'paymentCallback'])->name('payment_callback');
 
+Route::get('/show-payment', [PaymentController::class,'showPayment'])->name('show_payment');
+
+
 Route::middleware(['auth'])->prefix('user')->group(function () {
 
 Route::post('/send-contact-message', [UserController::class,'sendContact'])->name('send-contact');
@@ -114,4 +119,23 @@ Route::post('/make-payment', [PaymentController::class, 'makePayment'])->name('p
 
 Auth::routes(['verify' => true]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/email/verify', function () {
+    return view('auth.verify-email');
+})->middleware('auth')->name('verification.notice');
+
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    $request->fulfill();
+
+    return redirect('/home');
+})->middleware(['auth', 'signed'])->name('verification.verify');
+
+
+Route::post('/email/verification-notification', function (Request $request) {
+    $request->user()->sendEmailVerificationNotification();
+
+    return back()->with('message', 'Verification link sent!');
+})->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+
+Route::get('/profile', function () {
+    // Only verified users may access this route...
+})->middleware('verified');
