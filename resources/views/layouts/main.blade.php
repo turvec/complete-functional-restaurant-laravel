@@ -17,7 +17,7 @@ $cart_count = App\Models\Cart::where('user_id',Auth::id())->count();
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <!--=============== css  ===============-->
-    <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
     <link type="text/css" rel="stylesheet" href="css/reset.css">
     <link type="text/css" rel="stylesheet" href="css/plugins.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
