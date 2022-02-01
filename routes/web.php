@@ -110,3 +110,7 @@ Route::middleware(['auth'])->prefix('user')->group(function () {
 Route::post('/send-contact-message', [UserController::class,'sendContact'])->name('send-contact');
 Route::post('/make-payment', [PaymentController::class, 'makePayment'])->name('pay');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
