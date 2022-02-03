@@ -45,62 +45,6 @@
                         </div>
                     </div>
                     <!-- gallery-item end-->
-                    <!-- gallery-item-->
-                    <div class="gallery-item resta_img events">
-                        <div class="grid-item-holder hov_zoom">
-                            <a href="images/all/14.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                            <img  src="images/all/14.jpg"    alt="">
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->
-                    <!-- gallery-item-->
-                    <div class="gallery-item gallery-item-second dishes">
-                        <div class="grid-item-holder hov_zoom">
-                            <a href="images/all/9.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                            <img  src="images/all/9.jpg"    alt="">
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->
-                    <!-- gallery-item-->
-                    <div class="gallery-item resta_img events">
-                        <div class="grid-item-holder hov_zoom">
-                            <a href="images/all/10.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                            <img  src="images/all/10.jpg"    alt="">
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->
-                    <!-- gallery-item-->
-                    <div class="gallery-item resta_img video_links">
-                        <div class="grid-item-holder hov_zoom">
-                            <a href="https://vimeo.com/10322316" class="box-media-zoom   popup-image"><i class="fal fa-play"></i></a>
-                            <img  src="images/all/11.jpg"    alt="">
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->
-                    <!-- gallery-item-->
-                    <div class="gallery-item dishes">
-                        <div class="grid-item-holder hov_zoom">
-                            <a href="images/all/17.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                            <img  src="images/all/17.jpg"    alt="">
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->
-                    <!-- gallery-item-->
-                    <div class="gallery-item resta_img events video_links">
-                        <div class="grid-item-holder hov_zoom">
-                            <a href="https://www.youtube.com/watch?v=GlrxcuEDyF8" class="box-media-zoom   popup-image"><i class="fal fa-play"></i></a>
-                            <img  src="images/all/16.jpg"    alt="">
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->
-                    <!-- gallery-item-->
-                    <div class="gallery-item resta_img dishes">
-                        <div class="grid-item-holder hov_zoom">
-                            <a href="images/all/13.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                            <img  src="images/all/13.jpg"    alt="">
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->
                 </div>
                 <!-- gallery end -->
                 <div class="clearfix"></div>

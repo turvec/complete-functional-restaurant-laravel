@@ -58,6 +58,16 @@
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                <i class="flaticon-041-graph"></i>
+                <span class="nav-text">Explores</span>
+            </a>
+            <ul aria-expanded="false">
+                <li><a href="{{route('all_explores')}}">View All explores</a></li>
+                <li><a href="{{route('add_explore')}}">Add more </a></li>
+
+            </ul>
+        </li>
+            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-086-star"></i>
                     <span class="nav-text">Reviews</span>
                 </a>

@@ -1,5 +1,6 @@
 @php
 $cart_count = App\Models\Cart::where('user_id',Auth::id())->count();
+$payment_count = App\Models\Payment::where('user_id',Auth::id())->count();
 @endphp
 
 <!DOCTYPE HTML>
@@ -87,14 +88,14 @@ $cart_count = App\Models\Cart::where('user_id',Auth::id())->count();
                                     <li><a href="{{route('contact')}}">Contact</a></li>
                                     <li>
                                         @auth
-                                        <a href="#">More<i class="fas fa-caret-down"></i></a>
+                                        <a href="#">More               <span class="show-cart_count">{{$payment_count}}</span><i class="fas fa-caret-down"> </i></a>
                                         <!--second level -->
                                         <ul>
                                             <li><a href="{{route('show_reservation')}}">My Reservations</a></li>
                                             <li><a href="{{route('show_cart')}}">Cart</a></li>
                                             <a href="{{route('explore')}}">Explore</a>
                                             <li><a href="{{route('show_payment')}}">Payments</a></li>
-                                            <a href="">Orders</a>
+                                            <a href="{{route('show_order')}}">Orders</a>
                                             <li><a href="">Coming Soon</a></li>
                                         </ul>
                                         <!--second level end-->

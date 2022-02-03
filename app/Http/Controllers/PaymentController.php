@@ -76,7 +76,7 @@ class PaymentController extends Controller
     public function showOrder()
     {
        $order_count = Auth::user()->orders()->count();
-       $orders = Auth::user()->orders()->where('');
+       $orders = Auth::user()->orders;
        return view('user.orders', compact('orders','order_count'));
     }
 }

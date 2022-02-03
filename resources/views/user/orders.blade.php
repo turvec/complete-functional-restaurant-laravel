@@ -33,22 +33,48 @@
                         <tbody>
                             <tr>
                                 <th>Status</th>
-                                <th>Amount</th>
-                                <th>Reference</th>
+                                <th>Food Name</th>
+                                <th>Food Price</th>
+                                <th>Quantity</th>
+                                <th>Total Price</th>
+                                <th>Reveceived at/Delivery Address</th>
+                                <th>Payment Reference</th>
                             </tr>
                             @foreach ($orders as $order)
-                                <tr>
-                                    <td>
-                                        <h5 class="order-money">{{$order->status}}</h5>
-                                    </td>
-                                    <td>
-                                        <h5 class="order-money">{{$order->amount}}</h5>
-                                    </td>
-                                    <td>
-                                        <h5 class="order-money">{{$order->reference}}</h5>
-                                    </td>
 
-                                </tr>
+
+
+                            <tr>
+                                @if ($order->payment->status == 'success')
+                                <td>
+                                    <h5 class="order-money">{{$order->payment->status}}</h5>
+                                </td>
+                                <td>
+                                    <h5 class="order-money">{{$order->food_name}}</h5>
+                                </td>
+                                <td>
+                                    <h5 class="order-money">{{$order->init_price}}</h5>
+                                </td>
+                                <td>
+                                    <h5 class="order-money">{{$order->food_quantity}}</h5>
+                                </td>
+                                <td>
+                                    <h5 class="order-money">{{$order->total_price}}</h5>
+                                </td>
+                                @if ($order->delivery_address)
+                                <td>
+                                    <h5 class="order-money">{{$order->delivery_address}}</h5>
+                                </td>
+                                @else
+                                <td>
+                                    <h5 class="order-money">Closest Food Republic Around You</h5>
+                                </td>
+                                @endif
+                                <td>
+                                    <h5 class="order-money">{{$order->payment->reference}}</h5>
+                                </td>
+                                @endif
+                            </tr>
                             @endforeach
 
                         </tbody>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ChefController;
+use App\Http\Controllers\ExploreController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
@@ -92,6 +93,19 @@ Route::get('/edit-review/{id}', [AdminController::class,'editReview'])->name('ed
 
 Route::post('/update-review/{id}', [AdminController::class,'updateReview'])->name('update_review');
 
+
+
+Route::get('/add-explore', [ExploreController::class,'addExplore'])->name('add_explore');
+
+Route::post('/upload-explore', [ExploreController::class,'uploadExplore'])->name('upload_explore');
+
+Route::get('/all-explores', [ExploreController::class,'showAllExplores'])->name('all_explores');
+
+Route::get('/delete-explore/{id}', [ExploreController::class,'deleteExplore'])->name('delete_explore');
+
+
+
+
 Route::get('/add-chef', [ChefController::class,'addChef'])->name('add_chef');
 
 Route::post('/upload-chef', [ChefController::class,'uploadChef'])->name('upload_chef');
@@ -111,6 +125,8 @@ Route::get('/payment/callback', [PaymentController::class, 'paymentCallback'])->
 Route::get('/show-payment', [PaymentController::class,'showPayment'])->name('show_payment');
 
 Route::get('/show-order', [PaymentController::class,'showOrder'])->name('show_order');
+
+
 
 
 Route::middleware(['auth'])->prefix('user')->group(function () {
