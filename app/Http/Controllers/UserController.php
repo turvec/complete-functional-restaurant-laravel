@@ -6,6 +6,7 @@ use App\Mail\Contact;
 use App\Models\Cart;
 use App\Models\Category;
 use App\Models\Chef;
+use App\Models\Explore;
 use App\Models\Food;
 use App\Models\Reservation;
 use App\Models\Review;
@@ -32,7 +33,8 @@ class UserController extends Controller
     }
     public function showExplore()
     {
-        return view('user.explore');
+        $explores = Explore::all();
+        return view('user.explore', compact('explores'));
     }
     public function sendContact(Request $request)
     {

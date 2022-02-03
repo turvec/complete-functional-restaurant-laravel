@@ -5,7 +5,7 @@
     <div class="content">
         <!--  section  -->
         <section class="parallax-section hero-section hidden-section" data-scrollax-parent="true">
-            <div class="bg par-elem "  data-bg="images/bg/4.jpg" data-scrollax="properties: { translateY: '30%' }"></div>
+            <div class="bg par-elem " data-bg="images/bg/4.jpg" data-scrollax="properties: { translateY: '30%' }"></div>
             <div class="overlay"></div>
             <div class="container">
                 <div class="section-title">
@@ -28,23 +28,29 @@
                 <div class="gallery_filter-button btn">Show Filters <i class="fal fa-long-arrow-down"></i></div>
                 <!-- gallery-filters -->
                 <div class="gallery-filters gth">
-                    <a href="#" class="gallery-filter gallery-filter-active"  data-filter="*"><span>01.</span>All Images</a>
-                    <a href="#" class="gallery-filter " data-filter=".dishes"><span>02.</span>Dishes</a>
-                    <a href="#" class="gallery-filter" data-filter=".resta_img"><span>03.</span>Restaurant</a>
+                    <a href="#" class="gallery-filter gallery-filter-active" data-filter="*"><span>01.</span>All
+                        Images</a>
+                    <a href="#" class="gallery-filter " data-filter=".restuarant_view"><span>02.</span>Restuarant Inside View</a>
+                    <a href="#" class="gallery-filter" data-filter=".meals"><span>03.</span>Meals</a>
                     <a href="#" class="gallery-filter" data-filter=".events"><span>04.</span>Events</a>
-                    <a href="#" class="gallery-filter" data-filter=".video_links"><span>05.</span>Video</a>
+                    <a href="#" class="gallery-filter" data-filter=".trending"><span>05.</span>Trending</a>
                 </div>
                 <!-- gallery-filters end-->
+                @foreach ($explores as $explore)
+
                 <!-- gallery start -->
                 <div class="gallery-items min-pad  lightgallery three-column fl-wrap" style="margin-bottom:50px;">
                     <!-- gallery-item-->
-                    <div class="gallery-item dishes">
+                    <div class="gallery-item {{$explore->filter_by}} ">
                         <div class="grid-item-holder hov_zoom">
-                            <a href="images/all/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                            <img  src="images/all/1.jpg"    alt="">
+                            <a href="/explore_image/{{$explore->image}}" class="box-media-zoom   popup-image"><i
+                                    class="fal fa-search"></i></a>
+                            <img src="/explore_image/{{$explore->image}}" alt="">
                         </div>
                     </div>
                     <!-- gallery-item end-->
+
+                    @endforeach
                 </div>
                 <!-- gallery end -->
                 <div class="clearfix"></div>

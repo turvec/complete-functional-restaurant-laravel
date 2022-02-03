@@ -96,7 +96,6 @@ $payment_count = App\Models\Payment::where('user_id',Auth::id())->count();
                                             <a href="{{route('explore')}}">Explore</a>
                                             <li><a href="{{route('show_payment')}}">Payments</a></li>
                                             <a href="{{route('show_order')}}">Orders</a>
-                                            <li><a href="">Coming Soon</a></li>
                                         </ul>
                                         <!--second level end-->
                                         @endauth

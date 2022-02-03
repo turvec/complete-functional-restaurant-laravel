@@ -21,6 +21,7 @@ class ExploreController extends Controller
         $data = new Explore();
         $data->image = $imagename;
         $data->filter_by = $request->filter_by;
+        $data->large_size = $request->large_size;
         $data->save();
 
         return back();

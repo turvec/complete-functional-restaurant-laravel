@@ -30,9 +30,9 @@ class HomeController extends Controller
     {
         $reviews = Review::all();
         $events = Event::all();
-        $main_dishes = Food::where('category_id',1);
-        $pizzas = Food::where('category_id',2)->get();
-        $desserts = Food::where('category_id',3)->get();
+        $main_dishes = Food::where('category_id',1)->take(5)->get();
+        $pizzas = Food::where('category_id',2)->take(5)->get();
+        $desserts = Food::where('category_id',3)->take(5)->get();
         return view('user.home', compact('reviews', 'events','main_dishes','pizzas','desserts'));
     }
 

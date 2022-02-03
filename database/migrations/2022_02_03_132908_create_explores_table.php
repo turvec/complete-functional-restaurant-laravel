@@ -16,7 +16,8 @@ class CreateExploresTable extends Migration
         Schema::create('explores', function (Blueprint $table) {
             $table->id();
             $table->string('image');
-            $table->string('filter_by')->nullable();
+            $table->string('filter_by');
+            $table->string('large_size')->nullable();
             $table->timestamps();
         });
     }

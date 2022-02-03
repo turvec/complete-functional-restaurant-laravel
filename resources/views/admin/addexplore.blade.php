@@ -51,6 +51,12 @@
                                         </select>
                                     </div>
                                 </div>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input name="large_size" type="checkbox" class="form-check-input" value="gallery-item-second">
+                                        Show as a large image?
+                                    </label>
+                                </div>
                                 <div class="input-group mt-5">
                                     <button class="btn btn-rounded btn-primary">
                                         <span class="btn-icon-left text-primary">
