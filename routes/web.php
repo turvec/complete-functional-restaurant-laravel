@@ -110,6 +110,8 @@ Route::get('/payment/callback', [PaymentController::class, 'paymentCallback'])->
 
 Route::get('/show-payment', [PaymentController::class,'showPayment'])->name('show_payment');
 
+Route::get('/show-order', [PaymentController::class,'showOrder'])->name('show_order');
+
 
 Route::middleware(['auth'])->prefix('user')->group(function () {
 
@@ -126,7 +128,7 @@ Route::get('/email/verify', function () {
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
 
-    return redirect('/home');
+    return redirect('/redirects');
 })->middleware(['auth', 'signed'])->name('verification.verify');
 
 
@@ -136,6 +138,3 @@ Route::post('/email/verification-notification', function (Request $request) {
     return back()->with('message', 'Verification link sent!');
 })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 
-Route::get('/profile', function () {
-    // Only verified users may access this route...
-})->middleware('verified');
