@@ -38,8 +38,8 @@
                                             <a>
                                                 <div class="media d-flex align-items-center">
                                                     <div class="avatar avatar-xl mr-2">
-                                                        <div class=""><img class="rounded-circle img-fluid"
-                                                                src="/exploreimage/{{$explore->image}}" width="30"
+                                                        <div class=""><img class=" img-fluid"
+                                                                src="/explore_image/{{$explore->image}}" width="30"
                                                                 alt="" />
                                                         </div>
                                                     </div>
