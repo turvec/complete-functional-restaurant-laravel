@@ -38,13 +38,7 @@ class HomeController extends Controller
 
     public function redirects()
     {
-        $users = User::all();
-        $usertype = Auth::user()->usertype;
-        if ($usertype == '1') {
-            return view('admin.allusers',compact('users'));
-        } else {
-            return redirect()->route('home');
-        }
+       
 
     }
     //

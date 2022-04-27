@@ -24,8 +24,9 @@ class UserController extends Controller
     }
     public function showMenu()
     {
+        $category = Category::all();
         $foods = Food::all();
-        return view('user.foodmenu', compact('foods'));
+        return view('user.foodmenu', compact('foods','category'));
     }
     public function showContact()
     {

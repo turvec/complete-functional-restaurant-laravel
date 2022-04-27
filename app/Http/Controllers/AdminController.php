@@ -177,7 +177,7 @@ class AdminController extends Controller
             $ext = $request->file('image')->getClientOriginalExtension();
             $imagename = \Str::slug($request->name).time().'.'.$ext;
             $request->image->move(public_path('reviewsimage'),$imagename);
-            $data->image = $request->image;
+            $data->image = $imagename;
         }
         $data->save();
 
@@ -218,7 +218,7 @@ class AdminController extends Controller
             $ext = $request->file('image')->getClientOriginalExtension();
             $imagename = \Str::slug($request->name).time().'.'.$ext;
             $request->image->move(public_path('reviewsimage'),$imagename);
-            $data->image = $request->image;
+            $data->image = $imagename;
         }
         $data->save();
 

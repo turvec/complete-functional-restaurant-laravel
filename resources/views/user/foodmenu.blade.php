@@ -28,8 +28,8 @@
                 <!-- gallery-filters -->
                 <div class="gallery-filters gth">
                     <a href="#" class="gallery-filter gallery-filter-active"  data-filter="*"><span>01.</span>All Dishes</a>
-                    @foreach ($foods as $food)
-                    <a href="#" class="gallery-filter " data-filter=".{{$food->category->name}}"><span>01.</span>{{$food->category->name}}</a>
+                    @foreach ($category as $c)
+                    <a href="#" class="gallery-filter " data-filter=".{{$c->name}}"><span>01.</span>{{$c->name}}</a>
                     @endforeach
                 </div>
                 <!-- gallery-filters end-->

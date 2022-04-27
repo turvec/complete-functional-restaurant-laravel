@@ -2,7 +2,7 @@
 
 <!-- Mirrored from d2v79rrf7hys7i.cloudfront.net/xhtml/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jan 2022 22:34:55 GMT -->
 <head>
-    
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -13,24 +13,24 @@
         <link rel="stylesheet" href="admin/vendor/chartist/css/chartist.min.css">
         <link href="admin/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
         <link href="admin/css/style.css" rel="stylesheet">
-        
-        
+
+
     </head>
     <body>
-    
+
         <!--*******************
             Preloader start
         ********************-->
-       
+
         <!--*******************
             Preloader end
         ********************-->
-    
+
         <!--**********************************
             Main wrapper start
         ***********************************-->
         <div id="main-wrapper">
-    
+
             <!--**********************************
                 Nav header start
             ***********************************-->
@@ -51,7 +51,7 @@
             <!--**********************************
                 Nav header end
             ***********************************-->
-            
+
             <!--**********************************
                 Chat box start
             ***********************************-->
@@ -59,7 +59,7 @@
             <!--**********************************
                 Chat box End
             ***********************************-->
-            
+
             <!--**********************************
                 Header start
             ***********************************-->
@@ -68,12 +68,12 @@
                     <nav class="navbar navbar-expand">
                         <div class="collapse navbar-collapse justify-content-between">
                             <div class="header-left">
-                               
+
                             </div>
-    
+
                             <ul class="navbar-nav header-right">
                                 <li class="nav-item">
-                                    
+
                                 </li>
                                 <li class="nav-item dropdown notification_dropdown">
                                     <a class="nav-link" href="#" data-toggle="dropdown">
@@ -146,7 +146,7 @@
                                         </div>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right">
-                                      
+
                                         <a href="" class="dropdown-item ai-icon">
                                                 <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                                                 <x-jet-dropdown-link href="{{ route('profile.show') }}">
@@ -162,7 +162,7 @@
                                                     <!-- Authentication -->
                                                     <form method="POST" action="{{ route('logout') }}">
                                                             @csrf
-                            
+
                                                             <x-jet-dropdown-link href="{{ route('logout') }}"
                                                                      onclick="event.preventDefault();
                                                                             this.closest('form').submit();">
@@ -170,7 +170,7 @@
                                                             </x-jet-dropdown-link>
                                                         </form>
                                             </a>
-                                   
+
                                     </div>
                                 </li>
                             </ul>
@@ -181,7 +181,7 @@
             <!--**********************************
                 Header end ti-comment-alt
             ***********************************-->
-    
+
             <!--**********************************
                 Sidebar start
             ***********************************-->
@@ -189,7 +189,7 @@
             <!--**********************************
                 Sidebar end
             ***********************************-->
-            
+
             <!--**********************************
                 Content body start
             ***********************************-->
@@ -197,7 +197,7 @@
             <!--**********************************
                 Content body end
             ***********************************-->
-    
+
             <!--**********************************
                 Footer start
             ***********************************-->
@@ -209,21 +209,21 @@
             <!--**********************************
                 Footer end
             ***********************************-->
-    
+
             <!--**********************************
                Support ticket button start
             ***********************************-->
-    
+
             <!--**********************************
                Support ticket button end
             ***********************************-->
-    
-    
+
+
         </div>
         <!--**********************************
             Main wrapper end
         ***********************************-->
-    
+
         <!--**********************************
             Scripts
         ***********************************-->
@@ -231,20 +231,20 @@
         <script src="admin/vendor/global/global.min.js"></script>
         <script src="admin/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
         <script src="admin/vendor/chart.js/Chart.bundle.min.js"></script>
-        
+
         <!-- Chart piety plugin files -->
         <script src="admin/vendor/peity/jquery.peity.min.js"></script>
-        
+
         <!-- Apex Chart -->
         <script src="admin/vendor/apexchart/apexchart.js"></script>
-        
+
         <!-- Dashboard 1 -->
         <script src="admin/js/dashboard/dashboard-2.js"></script>
-    
+
         <script src="admin/js/custom.min.js"></script>
         <script src="admin/js/demo.js"></script>
         <script src="admin/js/styleSwitcher.js"></script>
     </body>
-    
+
     <!-- Mirrored from d2v79rrf7hys7i.cloudfront.net/xhtml/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jan 2022 22:34:55 GMT -->
     </html>
