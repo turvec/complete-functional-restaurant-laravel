@@ -46,8 +46,8 @@ $payment_count = App\Models\Payment::where('user_id',Auth::id())->count();
             <div class="header-top">
                 <div class="container">
                     <div class="lang-wrap"><a href="#" class="act-lang">En</a><span>/</span><a href="#">Fr</a></div>
-                    <div class="header-top_contacts"><a href="#"><span>Call now:</span> 07047792486</a><a
-                            href="#"><span>Write :</span> okaforturvec@gmail.com</a></div>
+                    <div class="header-top_contacts"><a href="tel:07047792486"><span>Call now:</span> 07047792486</a><a
+                        href="mailto:hello@victorokafor.com"><span>Write :</span> hello@victorokafor.com</a></div>
                 </div>
             </div>
             <!--header-top end -->
@@ -167,10 +167,11 @@ $payment_count = App\Models\Payment::where('user_id',Auth::id())->count();
                         <div class="footer-social">
                             <span class="footer-social-title">Follow us :</span>
                             <ul>
-                                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=100081999273076" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/victor-okafor-blockchaindev" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="https://twitter.com/turvec_dev?t=4rRRRlyJ3KoOJB0C2qd2OQ&s=09" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=100081999273076" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://wa.me/message/SFG4EQHWSPSXK1" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -198,8 +199,8 @@ $payment_count = App\Models\Payment::where('user_id',Auth::id())->count();
                                     <div class="footer-widget-content">
                                         <div class="footer-contacts footer-box fl-wrap">
                                             <ul>
-                                                <li><span>Call :</span><a href="#">07047792486</a> </li>
-                                                <li><span>Write :</span><a href="#">okaforturvec@gmail.com</a></li>
+                                                <li><span>Call :</span><a href="tel:07047792486">07047792486</a> </li>
+                                                <li><span>Write :</span><a href="mailto:hello@victorokafor.com">hello@victorokafor.com</a></li>
                                                 <li><span>Find us : </span><a href="#">AGIP, Port Harcourt city.
                                                         Nigeria</a></li>
                                             </ul>
@@ -213,7 +214,7 @@ $payment_count = App\Models\Payment::where('user_id',Auth::id())->count();
                     </div>
                     <!-- footer-widget-wrap end-->
                     <div class="footer-bottom fl-wrap">
-                        <div class="copyright">&#169; Turvec 2022 . All rights reserved. </div>
+                        <div class="copyright">&#169; victorokafor.com 2022 . All rights reserved. </div>
                         <div class="to-top"><span>Back To Top </span><i class="fal fa-angle-double-up"></i></div>
                     </div>
                 </div>

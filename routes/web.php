@@ -44,7 +44,7 @@ Route::get('/reservation', [UserController::class,'showReservation'])->name('sho
 Route::get('/add-category', [CategoryController::class,'index'])->name('addcategory');
 Route::post('/upload-category', [CategoryController::class,'data'])->name('upload-category');
 
-Route::middleware(['auth:sanctum'])->get('/dashboard', function () {
+Route::middleware(['auth'])->get('/dashboard', function () {
     $users = User::all();
     $usertype = Auth::user()->usertype;
     if ($usertype == '1') {
@@ -134,7 +134,7 @@ Route::get('/show-order', [PaymentController::class,'showOrder'])->name('show_or
 
 
 
-Route::middleware(['auth', 'verified'])->prefix('user')->group(function () {
+Route::middleware(['auth'])->prefix('user')->group(function () {
 
 Route::post('/send-contact-message', [UserController::class,'sendContact'])->name('send-contact');
 Route::post('/make-payment', [PaymentController::class, 'makePayment'])->name('pay');
