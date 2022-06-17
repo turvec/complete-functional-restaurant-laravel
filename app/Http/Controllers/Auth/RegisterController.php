@@ -74,7 +74,7 @@ class RegisterController extends Controller
             'phone' => $data['phone'],
         ]);
 
-        event(new Registered($user));
+        // event(new Registered($user));
 
         Auth::login($user);
 
